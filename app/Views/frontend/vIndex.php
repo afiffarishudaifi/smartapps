@@ -20,10 +20,10 @@
 			<!-- begin container -->
 			<div class="container home-content">
 				<h1>Selamat Datang Di Sistem Pengelolaan Smartapps Dan E-Complaint</h1>
-				<p>
+				<!-- <p>
 					We have created a multi-purpose theme that take the form of One-Page or Multi-Page Version.<br />
 					Use our <a href="#">theme panel</a> to select your favorite theme color.
-				</p>
+				</p> -->
 				<!-- <a href="#pengaduan" data-click="scroll-to-target" class="btn btn-theme btn-primary">Pengaduan</a> <a href="#contact" data-click="scroll-to-target" class="btn btn-theme btn-outline-white">Kontak</a><br /> -->
 			</div>
 			<!-- end container -->

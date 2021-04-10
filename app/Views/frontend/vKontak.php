@@ -12,19 +12,15 @@
 					<!-- begin col-6 -->
 					<div class="col-lg-6" data-animation="true" data-animation-type="fadeInLeft">
 						
-							<h3>If you have a project you would like to discuss, get in touch with us.</h3>
+							<h3>Jika anda ingin berdiskusi dapat menghubungi kami.</h3>
 							<p>
-								Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
-							</p>
-							<p>
-								<strong>SeanTheme Studio, Inc</strong><br />
-								795 Folsom Ave, Suite 600<br />
-								San Francisco, CA 94107<br />
-								P: (123) 456-7890<br />
+								<strong>Afif Faris Hudaifi</strong><br />
+								Jember, Jawa Timur, Indonesia<br />
+								089697020078<br />
 							</p>
 							<p>
 								<span class="phone">+11 (0) 123 456 78</span><br />
-								<a href="mailto:hello@emailaddress.com" class="text-primary">seanthemes@support.com</a>
+								<a href="https://afiffaris5@gmail.com" class="text-primary">afiffaris5@gmail.com</a>
 							</p>
 					</div>
 					<!-- end col-6 -->
