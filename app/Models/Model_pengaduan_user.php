@@ -15,7 +15,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -25,7 +25,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -36,7 +36,7 @@ class Model_pengaduan_user extends Model
 
     public function update_data($data, $id)
     {
-         $link = 'http://localhost/api_smartapps/public/User/';
+         $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -53,7 +53,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_web()
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -63,7 +63,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_web($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -76,7 +76,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_pengguna_apps()
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -86,7 +86,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_pengguna_apps($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -99,7 +99,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_kategori_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -109,7 +109,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_kategori_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -121,7 +121,7 @@ class Model_pengaduan_user extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);

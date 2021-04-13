@@ -17,7 +17,7 @@ class Model_kategori_pengaduan extends Model
 
     public function view_data()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -27,7 +27,7 @@ class Model_kategori_pengaduan extends Model
 
     public function add_data($data)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -41,7 +41,7 @@ class Model_kategori_pengaduan extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -52,7 +52,7 @@ class Model_kategori_pengaduan extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -66,7 +66,7 @@ class Model_kategori_pengaduan extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -76,7 +76,7 @@ class Model_kategori_pengaduan extends Model
 
     public function cek_foreign($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -91,7 +91,7 @@ class Model_kategori_pengaduan extends Model
 
     public function view_data_web()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -102,7 +102,7 @@ class Model_kategori_pengaduan extends Model
 
     public function detail_data_web($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -115,7 +115,7 @@ class Model_kategori_pengaduan extends Model
     // ======= UNTUK USER ======= //
     public function view_data_user($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);

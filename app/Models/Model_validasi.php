@@ -13,8 +13,7 @@ class Model_validasi extends Model
 
     public function view_tempat()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
-
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -24,7 +23,7 @@ class Model_validasi extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -44,7 +43,7 @@ class Model_validasi extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -54,7 +53,7 @@ class Model_validasi extends Model
 
     public function detail_data_foto($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -67,7 +66,7 @@ class Model_validasi extends Model
     // begin validasi pengaduan //
     public function view_data_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -77,7 +76,7 @@ class Model_validasi extends Model
 
     public function detail_data_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -88,7 +87,7 @@ class Model_validasi extends Model
 
     public function update_data_pengaduan($data, $id)
     {
-         $link = 'http://localhost/api_smartapps/public/Admin/';
+         $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -101,7 +100,7 @@ class Model_validasi extends Model
 
     public function data_edit_dropwdown_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);

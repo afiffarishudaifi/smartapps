@@ -11,7 +11,7 @@ class Model_dashboard_user extends Model
 
     public function pengaduan($param)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -25,7 +25,7 @@ class Model_dashboard_user extends Model
 
     public function jumlah_pengajuan_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -36,7 +36,7 @@ class Model_dashboard_user extends Model
 
     public function jumlah_penanganan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -47,7 +47,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_terkonfirmasi($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -58,7 +58,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_penanganan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -69,7 +69,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_selesai($id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -80,7 +80,7 @@ class Model_dashboard_user extends Model
 
     public function view_detail_pengaduan($param, $id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);

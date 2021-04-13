@@ -12,7 +12,7 @@ class Model_dashboard extends Model
 
     public function pengaduan($param)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -25,7 +25,7 @@ class Model_dashboard extends Model
 
     public function jumlah_pengajuan_tempat()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -36,7 +36,7 @@ class Model_dashboard extends Model
 
     public function jumlah_pengajuan_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -47,7 +47,7 @@ class Model_dashboard extends Model
 
     public function total_web()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -58,7 +58,7 @@ class Model_dashboard extends Model
 
     public function total_tempat_pengajuan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -69,7 +69,7 @@ class Model_dashboard extends Model
 
     public function total_tempat_terkonfirmasi()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -80,7 +80,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -91,7 +91,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan_pengajuan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -102,7 +102,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan_terkonfirmasi()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -113,7 +113,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan_penanganan()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -124,7 +124,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan_selesai()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -135,7 +135,7 @@ class Model_dashboard extends Model
 
     public function total_pengaduan_ditolak()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -146,7 +146,7 @@ class Model_dashboard extends Model
 
     public function view_detail_pengaduan($param)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);

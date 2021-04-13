@@ -88,7 +88,7 @@
                                         <td><?= $item['NO_TELP_WEB']; ?></td>
                                         <td>
                                             <center>
-                                                <img class="img-rounded" style="width: 60px; height: 80px;" src="<?= 'http://localhost/api_smartapps//public/' . $item['FOTO_WEB']; ?>">
+                                                <img class="img-rounded" style="width: 60px; height: 80px;" src="<?= 'http://localhost/api_smartapps/' . $item['FOTO_WEB']; ?>">
                                             </center>
                                         </td>
                                         <td>

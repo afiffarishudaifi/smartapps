@@ -77,14 +77,14 @@ class M_validasi extends BaseController
         $model = new Model_validasi_user();
         $pengaduan = $model->view_data_penanganan();
         $data = [
-            'judul' => 'Validasi Pengaduan',
-            'page_header' => 'Validasi Pengaduan',
-            'panel_title' => 'Validasi Pengaduan',
+            'judul' => 'Validasi Penanganan',
+            'page_header' => 'Validasi Penanganan',
+            'panel_title' => 'Validasi Penanganan',
             'pengaduan' => $pengaduan,
             'jml_pengaduan' => $jumlah_pengajuan_pengaduan,
             'jml_penanganan' => $jumlah_penanganan
         ];
-        return view('user/vValidasiPengaduan', $data);
+        return view('user/vValidasiPenanganan', $data);
     }
     // end penanganan
 }

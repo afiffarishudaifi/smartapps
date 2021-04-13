@@ -13,8 +13,7 @@ class Model_tempat extends Model
 
     public function view_tempat()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
-
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -24,7 +23,7 @@ class Model_tempat extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -35,7 +34,7 @@ class Model_tempat extends Model
 
     public function add_data($data)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -77,7 +76,7 @@ class Model_tempat extends Model
 
     public function add_data_foto($data)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -101,7 +100,7 @@ class Model_tempat extends Model
 
     public function data_pengguna_apps()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -112,7 +111,7 @@ class Model_tempat extends Model
 
     public function data_kategori_tempat()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -123,7 +122,7 @@ class Model_tempat extends Model
 
     public function data_max_id()
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -143,7 +142,7 @@ class Model_tempat extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -153,7 +152,7 @@ class Model_tempat extends Model
 
     public function delete_foto_tempat($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -163,7 +162,7 @@ class Model_tempat extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -173,7 +172,7 @@ class Model_tempat extends Model
 
     public function detail_data_foto($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Admin/';
+        $link = 'http://localhost/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);

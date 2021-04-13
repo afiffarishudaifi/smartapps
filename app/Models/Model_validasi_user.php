@@ -14,7 +14,7 @@ class Model_validasi_user extends Model
     // begin validasi Pengaduan //
     public function view_data_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -24,7 +24,7 @@ class Model_validasi_user extends Model
 
     public function update_data_pengaduan($data, $id)
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -37,7 +37,7 @@ class Model_validasi_user extends Model
 
     public function view_data_penanganan()
     {
-        $link = 'http://localhost/api_smartapps/public/User/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);

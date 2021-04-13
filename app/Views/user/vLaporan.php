@@ -160,8 +160,6 @@
     <script src="<?php echo base_url('docs/admin/assets/plugins/select2/js/select2.full.min.js') ?>"></script>
     <link rel="stylesheet" href="<?php echo base_url('docs/admin/assets/plugins/select2/css/select2.min.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('docs/admin/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') ?>">
-
-
     <!-- ================== END PAGE LEVEL JS ================== -->
 
     <script src="<?= base_url() ?>/docs/admin/assets/plugins/moment/moment.min.js"></script>

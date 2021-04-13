@@ -27,7 +27,6 @@
             if ($session->getFlashdata('sukses')) { ?>
             <input type="hidden" name="pemberitahuan" id="pemberitahuan"
                 value="<?php echo $session->getFlashdata('sukses'); ?>">
-            <!-- <p class="alert alert-success" id="pemberitahuan"><?php echo $session->getFlashdata('sukses'); ?></p> -->
             <?php } ?>
             <!-- begin breadcrumb -->
             <ol class="breadcrumb float-xl-right">
@@ -81,7 +80,7 @@
                                         <td width="1%"><?= $no++; ?></td>
                                         <td>
                                             <center>
-                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://localhost/api_smartapps/public/' . $item['NAMA_FOTO']; ?>">
+                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://localhost/api_smartapps/' . $item['NAMA_FOTO']; ?>">
                                             </center>
                                         </td>
                                         <td>

@@ -73,7 +73,7 @@ class M_foto_tempat extends BaseController
                       if ($img->isValid() && ! $img->hasMoved())
                       {
                             $namabaru     = $img->getRandomName();
-                            $img->move('docs/admin/assets/img/foto_tempat', $namabaru);// Masuk database
+                            $img->move('docs/admin/assets/img/foto_tempat', $namabaru);
                             $data = array(
                                 'id_tempat'     => $this->request->getVar('id_tempat'),
                                 'file'      => "docs/admin/assets/img/foto_tempat/" . $namabaru,

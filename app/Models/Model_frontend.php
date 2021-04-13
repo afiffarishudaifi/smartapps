@@ -11,7 +11,7 @@ class Model_frontend extends Model
 
     public function view_data_tempat()
     {
-        $link = 'http://localhost/api_smartapps/public/Frontend/';
+        $link = 'http://localhost/api_smartapps/Frontend/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -22,7 +22,7 @@ class Model_frontend extends Model
 
     public function detail_data_tempat($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Frontend/';
+        $link = 'http://localhost/api_smartapps/Frontend/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -33,7 +33,7 @@ class Model_frontend extends Model
 
     public function view_data_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/public/Frontend/';
+        $link = 'http://localhost/api_smartapps/Frontend/';
 
         $client = new Client([
             'base_uri' => $link,
@@ -44,7 +44,7 @@ class Model_frontend extends Model
 
     public function detail_data_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/public/Frontend/';
+        $link = 'http://localhost/api_smartapps/Frontend/';
         $client = new Client([
             'base_uri' => $link,
         ]);

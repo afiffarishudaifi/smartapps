@@ -28,6 +28,11 @@ $pathsPath = realpath(FCPATH . 'app/Config/Paths.php');
 // Ensure the current directory is pointing to the front controller's directory
 chdir(__DIR__);
 
+# CLEANER -  only shows last error logs and debugbar JSON files
+  define('LOGFILE',  '../writable/logs/log-' .date('Y-m-d') .'.php');
+  $ok = @unlink(LOGFILE);
+  $ok = @array_map('unlink', glob("../writable/debugbar/*.json"));
+
 // Load our paths config file
 require $pathsPath;
 $paths = new Config\Paths();

@@ -70,10 +70,16 @@ $session = session();
                 </a>
                 <ul class="sub-menu">
                     <li class="<?php
-                            if ($uri->getSegment(2) == 'M_validasi') {
+                            if ($uri->getSegment(2) == 'M_validasi' && $uri->getSegment(3) == '') {
                                 echo "active";
                             } ?>"><a href="<?php echo base_url('User/M_validasi'); ?>">
                         <i class="fa fa-check-circle"></i> &nbsp;Validasi Pengaduan</a>
+                    </li>
+                    <li class="<?php
+                            if ($uri->getSegment(2) == 'M_validasi' && $uri->getSegment(3) == 'index_penanganan') {
+                                echo "active";
+                            } ?>"><a href="<?php echo base_url('User/M_validasi/index_penanganan'); ?>">
+                        <i class="fa fa-hourglass-half"></i> &nbsp;Validasi Penanganan</a>
                     </li>
                 </ul>
             </li>
