@@ -21,7 +21,7 @@ class M_pengaduan extends BaseController
         $session = session();
         $id = $session->get('id_login');
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model = new Model_dashboard_user();
@@ -45,7 +45,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $id = $session->get('id_login');
@@ -71,7 +71,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         if (isset($_POST['edit'])) {
             helper(['form', 'url']);
@@ -84,9 +84,9 @@ class M_pengaduan extends BaseController
             );
             $model->update_data($data, $id);
             $session->setFlashdata('sukses', 'Data sudah berhasil Diubah');
-            return redirect()->to(base_url('public/user/M_pengaduan'));
+            return redirect()->to(base_url('user/M_pengaduan'));
         } else {
-            return redirect()->to('public/user/M_pengaduan');
+            return redirect()->to('user/M_pengaduan');
         }
     }
 

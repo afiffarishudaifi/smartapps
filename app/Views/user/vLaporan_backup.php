@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png">
+    <link rel="icon" type="image/png" href="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
     <title><?= $judul; ?></title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
@@ -192,7 +192,7 @@
     $(function() {
         $('#table').DataTable({
             "ajax": {
-                "url": "<?php echo base_url() ?>public/User/M_laporan/data/" + $('#tanggal').val() + '/' + $('#select_kategori').val() + '/' + $(
+                "url": "<?php echo base_url() ?>User/M_laporan/data/" + $('#tanggal').val() + '/' + $('#select_kategori').val() + '/' + $(
                     '#select_status').val(),
                 "dataSrc": ""
             },
@@ -218,7 +218,7 @@
             placeholder: "Pilih Kategori",
             theme: 'bootstrap4',
             ajax: {
-                url: '<?php echo base_url('public/User/M_laporan/data_kategori'); ?>',
+                url: '<?php echo base_url('User/M_laporan/data_kategori'); ?>',
                 dataType: 'json'
             }
         });
@@ -233,19 +233,19 @@
             })
           });
          function ganti(Kategori, status) {
-        $('#table').DataTable().ajax.url('<?php echo base_url() ?>public/User/M_laporan/data/' + $('#tanggal').val() + '/' + Kategori + '/' + status)
+        $('#table').DataTable().ajax.url('<?php echo base_url() ?>User/M_laporan/data/' + $('#tanggal').val() + '/' + Kategori + '/' + status)
                 .load();
         }
 
         $('#tanggal').on('apply.daterangepicker', function(ev, picker) {
         var tanggal = picker.startDate.format('DD-MM-YYYY') + ' - ' + picker.endDate.format('DD-MM-YYYY');
-        $('#table').DataTable().ajax.url('<?php echo base_url() ?>public/User/M_laporan/data/' + tanggal + '/' + $('#select_kategori').val() + '/' + $('#select_status').val()).load();
+        $('#table').DataTable().ajax.url('<?php echo base_url() ?>User/M_laporan/data/' + tanggal + '/' + $('#select_kategori').val() + '/' + $('#select_status').val()).load();
     });
 
     $(document).ready(function(){
         setInterval(function(){
             $.ajax({
-                url:"<?= base_url()?>/public/User/Dashboard/jumlah_pengajuan",
+                url:"<?= base_url()?>/User/Dashboard/jumlah_pengajuan",
                 type:"POST",
                 dataType:"json",
                 data:{},

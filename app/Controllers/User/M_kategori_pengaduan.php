@@ -21,7 +21,7 @@ class M_kategori_pengaduan extends BaseController
         $session = session();
         $id = $session->get('id_login');
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model = new Model_dashboard_user();
@@ -46,7 +46,7 @@ class M_kategori_pengaduan extends BaseController
         $session = session();
         $id = $session->get('id_login');
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model = new Model_dashboard_user();
@@ -63,7 +63,7 @@ class M_kategori_pengaduan extends BaseController
             $model = new Model_kategori_pengaduan_user();
             $model->add_data($data);
             $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
-            return redirect()->to(base_url('public/User/M_kategori_pengaduan'));
+            return redirect()->to(base_url('User/M_kategori_pengaduan'));
         } else {
             $data =
                 [
@@ -81,7 +81,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $id_login = $session->get('id_login');
@@ -107,7 +107,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         if (isset($_POST['edit'])) {
             helper(['form', 'url']);
@@ -120,9 +120,9 @@ class M_kategori_pengaduan extends BaseController
             $model = new Model_kategori_pengaduan_user();
             $model->update_data($data, $id);
             $session->setFlashdata('sukses', 'Data sudah berhasil di Ubah');
-            return redirect()->to(base_url('public/User/M_kategori_pengaduan'));
+            return redirect()->to(base_url('User/M_kategori_pengaduan'));
         } else {
-            return redirect()->to('public/User/M_kategori_pengaduan');
+            return redirect()->to('User/M_kategori_pengaduan');
         }
     }
 
@@ -139,7 +139,7 @@ class M_kategori_pengaduan extends BaseController
         } else {
             session()->setFlashdata('sukses', 'Data ini dipakai di tabel lain dan tidak bisa dihapus');
         }
-        return redirect()->to('/smartapps/public/User/M_kategori_pengaduan');
+        return redirect()->to('/smartapps/User/M_kategori_pengaduan');
     }
 
     // ======= KATEGORI PENGADUAN ======= //

@@ -21,7 +21,7 @@ class M_laporan extends BaseController
         $session = session();
         $id = $session->get('id_login');
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model = new Model_dashboard_user();
@@ -63,7 +63,7 @@ class M_laporan extends BaseController
         $session = session();
         $id = $session->get('id_login');
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         if ($tanggal) $tgl = explode('%20-%20', $tanggal);

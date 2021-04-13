@@ -48,10 +48,10 @@ class Frontend extends BaseController
         $this->email->setMessage($message);
 
         if ($this->email->send()) {
-            return redirect()->to('/smartapps/public/Frontend/Frontend');
+            return redirect()->to('/smartapps/Frontend/Frontend');
         } else {
             session()->setFlashdata('error', "Send Email failed. Error: ");
-            return redirect()->to('/smartapps/public/Frontend/Frontend');
+            return redirect()->to('/smartapps/Frontend/Frontend');
         }
     }
 }

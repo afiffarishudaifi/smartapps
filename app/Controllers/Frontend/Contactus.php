@@ -38,11 +38,11 @@ class Contactus extends BaseController
 
 		if ($this->email->send()) {
 			// session()->setFlashdata('error', 'Send Email successfully');
-            return redirect()->to('/smartapps/public/Frontend/Contactus');
+            return redirect()->to('/smartapps/Frontend/Contactus');
 			// return true;
 		} else {
 			session()->setFlashdata('error', "Send Email failed. Error: ");
-            return redirect()->to('/smartapps/public/Frontend/Contactus');
+            return redirect()->to('/smartapps/Frontend/Contactus');
 			// return 'gagal';
 		}
     }

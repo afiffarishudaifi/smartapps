@@ -20,7 +20,7 @@ class M_pengguna_apps extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -44,7 +44,7 @@ class M_pengguna_apps extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         };
 
         $model_dash = new Model_dashboard();
@@ -68,7 +68,7 @@ class M_pengguna_apps extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         helper(['form', 'url']);
@@ -83,7 +83,7 @@ class M_pengguna_apps extends BaseController
             // 'file'=> 'mime_in[file,image/jpg,image/jpeg,image/png]|max_size[file,2048]'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_pengguna_apps/form_tambah'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_pengguna_apps/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $avatar      = $this->request->getFile('file');
@@ -110,14 +110,14 @@ class M_pengguna_apps extends BaseController
             unlink($gambar);
         }
 
-        return redirect()->to(base_url('public/Dashboard/M_pengguna_apps'));
+        return redirect()->to(base_url('Dashboard/M_pengguna_apps'));
     }
 
     public function detail_pengguna_apps($id)
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -147,7 +147,7 @@ class M_pengguna_apps extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         if (isset($_POST['edit'])) {
             helper(['form', 'url']);
@@ -174,7 +174,7 @@ class M_pengguna_apps extends BaseController
                 'username' => $rule_username
             ])) {
                 $validation = \Config\Services::validation();
-                return redirect()->to(base_url('public/Dashboard/M_pengguna_apps/detail_pengguna_apps' . '/' . $id))->withInput()->with('validation', $validation);
+                return redirect()->to(base_url('Dashboard/M_pengguna_apps/detail_pengguna_apps' . '/' . $id))->withInput()->with('validation', $validation);
             }
 
             $file = $this->request->getFile('file');
@@ -191,7 +191,7 @@ class M_pengguna_apps extends BaseController
                 );
                 $model->update_data($data, $id);
                 $session->setFlashdata('sukses', 'Data sudah berhasil di Ubah');
-                return redirect()->to(base_url('public/Dashboard/M_pengguna_apps'));
+                return redirect()->to(base_url('Dashboard/M_pengguna_apps'));
             } else {
                 $avatar      = $this->request->getFile('file');
                 $namabaru     = $avatar->getRandomName();
@@ -217,10 +217,10 @@ class M_pengguna_apps extends BaseController
                     unlink($gambar);
                 }
 
-                return redirect()->to(base_url('public/Dashboard/M_pengguna_apps'));
+                return redirect()->to(base_url('Dashboard/M_pengguna_apps'));
             }
         } else {
-            return redirect()->to('public/Dashboard/M_pengguna_apps');
+            return redirect()->to('Dashboard/M_pengguna_apps');
         }
     }
 
@@ -240,6 +240,6 @@ class M_pengguna_apps extends BaseController
             session()->setFlashdata('sukses', 'Data ini dipakai di tabel lain dan tidak bisa dihapus');
         }
 
-        return redirect()->to('/smartapps/public/Dashboard/M_pengguna_apps');
+        return redirect()->to('/smartapps/Dashboard/M_pengguna_apps');
     }
 }

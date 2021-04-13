@@ -31,10 +31,10 @@
             <?php } ?>
             <!-- begin breadcrumb -->
             <ol class="breadcrumb float-xl-right">
-                <a href="<?php echo base_url('public/Dashboard/M_tempat'); ?>" type="button"
+                <a href="<?php echo base_url('Dashboard/M_tempat'); ?>" type="button"
                     class="btn btn-secondary mb-2"><i class="fas fa-arrow-alt-circle-left"></i> Kembali</a>
                     &nbsp; &nbsp;
-                <a href="<?php echo base_url('public/Dashboard/M_foto_tempat/add_foto_tempat') . '/' . $id_tempat; ?>" type="button"
+                <a href="<?php echo base_url('Dashboard/M_foto_tempat/add_foto_tempat') . '/' . $id_tempat; ?>" type="button"
                     class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Data</a>
             </ol>
             <!-- end breadcrumb -->
@@ -81,7 +81,7 @@
                                         <td width="1%"><?= $no++; ?></td>
                                         <td>
                                             <center>
-                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://localhost/api_smartapps//public/' . $item['NAMA_FOTO']; ?>">
+                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://localhost/api_smartapps/public/' . $item['NAMA_FOTO']; ?>">
                                             </center>
                                         </td>
                                         <td>
@@ -108,7 +108,7 @@
         <!-- end #content -->
 
         <!-- Modal Delete Class-->
-        <form action="<?php echo base_url('public/Dashboard/M_foto_tempat/delete_foto_tempat'); ?>" method="post">
+        <form action="<?php echo base_url('Dashboard/M_foto_tempat/delete_foto_tempat'); ?>" method="post">
             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">

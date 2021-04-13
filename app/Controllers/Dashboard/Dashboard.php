@@ -12,7 +12,7 @@ class Dashboard extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model = new Model_dashboard();
@@ -101,7 +101,7 @@ class Dashboard extends BaseController
         $session = session();
         
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -126,7 +126,7 @@ class Dashboard extends BaseController
         $session = session();
         
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();

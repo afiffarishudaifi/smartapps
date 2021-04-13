@@ -20,7 +20,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -44,7 +44,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         };
 
         $model_dash = new Model_dashboard();
@@ -68,7 +68,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         
         helper(['form', 'url']);
@@ -77,7 +77,7 @@ class M_kategori_pengaduan extends BaseController
             'id_web' => 'required'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_kategori_pengaduan/form_tambah'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_kategori_pengaduan/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -87,7 +87,7 @@ class M_kategori_pengaduan extends BaseController
         $model = new Model_kategori_pengaduan();
         $model->add_data($data);
         $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
-        return redirect()->to(base_url('public/Dashboard/M_kategori_pengaduan'));
+        return redirect()->to(base_url('Dashboard/M_kategori_pengaduan'));
     }
 
     public function detail_kategori_pengaduan($id)
@@ -115,7 +115,7 @@ class M_kategori_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         helper(['form', 'url']);
         $model = new Model_kategori_pengaduan();
@@ -135,7 +135,7 @@ class M_kategori_pengaduan extends BaseController
             'id_web' => 'required'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_kategori_pengaduan/detail_kategori_pengaduan' . '/' . $id))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_kategori_pengaduan/detail_kategori_pengaduan' . '/' . $id))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -144,7 +144,7 @@ class M_kategori_pengaduan extends BaseController
         );
         $model->update_data($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil di Ubah');
-        return redirect()->to(base_url('public/Dashboard/M_kategori_pengaduan'));
+        return redirect()->to(base_url('Dashboard/M_kategori_pengaduan'));
     }
 
     public function delete_kategori_pengaduan()
@@ -160,7 +160,7 @@ class M_kategori_pengaduan extends BaseController
         } else {
             session()->setFlashdata('sukses', 'Data ini dipakai di tabel lain dan tidak bisa dihapus');
         }
-        return redirect()->to('/smartapps/public/Dashboard/M_kategori_pengaduan');
+        return redirect()->to('/smartapps/Dashboard/M_kategori_pengaduan');
     }
 
     // ======= KATEGORI PENGADUAN ======= //

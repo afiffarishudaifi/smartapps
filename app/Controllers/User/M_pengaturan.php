@@ -20,7 +20,7 @@ class M_pengaturan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         $id = $session->get('id_login');
         $model = new Model_dashboard_user();
@@ -50,7 +50,7 @@ class M_pengaturan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') != 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         helper(['form', 'url']);
@@ -78,7 +78,7 @@ class M_pengaturan extends BaseController
             'email_web' => $rule_email
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/User/M_pengaturan'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('User/M_pengaturan'))->withInput()->with('validation', $validation);
         }
 
         $file = $this->request->getFile('file');
@@ -94,7 +94,7 @@ class M_pengaturan extends BaseController
             );
             $model->update_data($data, $id);
             $session->setFlashdata('sukses', 'Data sudah berhasil di Ubah');
-            return redirect()->to(base_url('public/Dashboard/Login/logout'));
+            return redirect()->to(base_url('Dashboard/Login/logout'));
         } else {
             $avatar      = $this->request->getFile('file');
             $namabaru     = $avatar->getRandomName();
@@ -118,7 +118,7 @@ class M_pengaturan extends BaseController
                 unlink($data['gambar']);
             }
 
-            return redirect()->to(base_url('public/Dashboard/Login/logout'));
+            return redirect()->to(base_url('Dashboard/Login/logout'));
         }
     }
 }

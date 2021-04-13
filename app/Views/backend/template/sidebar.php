@@ -13,7 +13,7 @@ $session = session();
                     <div class="image">
                         <center>
                             <img
-                                src="<?= 'http://localhost/api_smartapps//public/' . $session->get('foto_login'); ?>" />
+                                src="<?= 'http://localhost/api_smartapps/public/' . $session->get('foto_login'); ?>" />
                         </center>
                     </div>
                     <div class="info">
@@ -31,7 +31,7 @@ $session = session();
                         if ($uri->getSegment(2) == 'Dashboard') {
                             echo "active";
                         } ?>">
-                <a href="<?php echo base_url('public/Dashboard/Dashboard'); ?>">
+                <a href="<?php echo base_url('Dashboard/Dashboard'); ?>">
                     <i class="fa fa-home"></i>
                     <span>Dashboard</span>
                 </a>
@@ -54,43 +54,43 @@ $session = session();
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_kategori_tempat') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_kategori_tempat'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_kategori_tempat'); ?>">
                             <i class="fas fa-map-marker-alt"></i> &nbsp;Kategori Tempat</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_tempat') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_tempat'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_tempat'); ?>">
                             <i class="fa fa-map-marker"></i> &nbsp;Tempat</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_pengguna_apps') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_pengguna_apps'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_pengguna_apps'); ?>">
                             <i class="fa fa-mobile"></i> &nbsp;Pengguna Android</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_pengguna_web') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_pengguna_web'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_pengguna_web'); ?>">
                             <i class="fa fa-desktop"></i> &nbsp;Pengguna Web</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_kategori_pengaduan') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_kategori_pengaduan'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_kategori_pengaduan'); ?>">
                             <i class="fa fa-folder-open"></i> &nbsp;Kategori Pengaduan</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_pengaduan') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_pengaduan'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_pengaduan'); ?>">
                             <i class="fa fa-folder"></i> &nbsp;Pengaduan</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_komentar') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_komentar'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_komentar'); ?>">
                             <i class="fa fa-comments"></i> &nbsp;Komentar</a>
                     </li>
                 </ul>
@@ -108,13 +108,13 @@ $session = session();
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_validasi_tempat') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_validasi_tempat'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_validasi_tempat'); ?>">
                             <i class="fas fa-check"></i> &nbsp;Validasi Tempat</a>
                     </li>
                     <li class="<?php
                                 if ($uri->getSegment(2) == 'M_validasi_pengaduan') {
                                     echo "active";
-                                } ?>"><a href="<?php echo base_url('public/Dashboard/M_validasi_pengaduan'); ?>">
+                                } ?>"><a href="<?php echo base_url('Dashboard/M_validasi_pengaduan'); ?>">
                             <i class="fa fa-check-circle"></i> &nbsp;Validasi Pengaduan</a>
                     </li>
                 </ul>

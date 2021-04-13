@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png">
+    <link rel="icon" type="image/png" href="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
     <title><?= $judul; ?></title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
@@ -70,7 +70,7 @@
                             <p><?= $total_pengaduan_terkonfirmasi; ?></p>
                         </div>
                         <div class="stats-link">
-                            <a href="<?= base_url()?>/public/User/Dashboard/detail_pengaduan/Terkonfirmasi">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+                            <a href="<?= base_url()?>/User/Dashboard/detail_pengaduan/Terkonfirmasi">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                             <p><?= $total_pengaduan_penanganan; ?></p>
                         </div>
                         <div class="stats-link">
-                            <a href="<?= base_url()?>/public/User/Dashboard/detail_pengaduan/Penanganan">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+                            <a href="<?= base_url()?>/User/Dashboard/detail_pengaduan/Penanganan">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <p><?= $total_pengaduan_selesai; ?></p>
                         </div>
                         <div class="stats-link">
-                            <a href="<?= base_url()?>/public/User/Dashboard/detail_pengaduan/Selesai">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+                            <a href="<?= base_url()?>/User/Dashboard/detail_pengaduan/Selesai">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <div class="panel-body pr-1">
-                            <form action="<?php echo base_url('public/User/Dashboard') ?>" method="POST"
+                            <form action="<?php echo base_url('User/Dashboard') ?>" method="POST"
                                 id="filter_form">
                                 <?= csrf_field(); ?>
                                 <div class="form-row">
@@ -248,7 +248,7 @@
     $(document).ready(function() {
         setInterval(function() {
             $.ajax({
-                url: "<?= base_url() ?>/public/User/Dashboard/jumlah_pengajuan",
+                url: "<?= base_url() ?>/User/Dashboard/jumlah_pengajuan",
                 type: "POST",
                 dataType: "json",
                 data: {},

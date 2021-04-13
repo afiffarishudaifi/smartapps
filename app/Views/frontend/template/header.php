@@ -5,7 +5,7 @@
 				<!-- begin navbar-brand -->
 				<a href="" class="navbar-brand">
 					<span class="brand-logo">
-						<img src="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png">
+						<img src="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
 					</span>
 					<span class="brand-text">
 						<span class="">Simpel</span> Dasar
@@ -28,7 +28,7 @@
 						<li class="nav-item"><a class="nav-link" href="#about" data-click="scroll-to-target">TENTANG SIMPEL DASAR</a></li>
 						<li class="nav-item"><a class="nav-link" href="#keunggulan" data-click="scroll-to-target">KEUNGGULAN</a></li>
 						<li class="nav-item"><a class="nav-link" href="#contact" data-click="scroll-to-target">KONTAK</a></li>
-						<li class="nav-item"><a class="nav-link" href="<?= base_url()?>/public/Dashboard/Login">LOGIN</a></li>
+						<li class="nav-item"><a class="nav-link" href="<?= base_url()?>/Dashboard/Login">LOGIN</a></li>
 					</ul>
 				</div>
 				<!-- end navbar-collapse -->

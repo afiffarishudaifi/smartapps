@@ -28,26 +28,26 @@
 
         </li>
         <li class="">
-            <a href="<?php echo base_url('public/User/M_validasi'); ?>" data-toggle="">
+            <a href="<?php echo base_url('User/M_validasi'); ?>" data-toggle="">
                 <i class="fa fa-check-circle"></i>
                 <span class="label label-primary" id="total_pengaduan"><?= $jml_pengaduan['ID_PENGADUAN']; ?></span>
             </a>
         </li>
         <li class="">
-            <a href="<?php echo base_url('public/User/M_validasi/index_penanganan'); ?>" data-toggle="">
+            <a href="<?php echo base_url('User/M_validasi/index_penanganan'); ?>" data-toggle="">
                 <i class="fa fa-hourglass-half"></i>
                 <span class="label label-primary" id="total_penanganan"><?= $jml_penanganan['ID_PENGADUAN']; ?></span>
             </a>
         </li>
         <li class="dropdown navbar-user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<?= 'http://localhost/api_smartapps//public/' . $session->get('foto_login'); ?>" alt="" />
+                <img src="<?= 'http://localhost/api_smartapps/public/' . $session->get('foto_login'); ?>" alt="" />
                 <span class="d-none d-md-inline"><?= $session->get('nama_login'); ?></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="<?php echo base_url('public/User/M_pengaturan'); ?>" class="dropdown-item">Pengaturan</a>
+                <a href="<?php echo base_url('User/M_pengaturan'); ?>" class="dropdown-item">Pengaturan</a>
                 <div class="dropdown-divider"></div>
-                <a href="<?php echo base_url('public/Dashboard/Login/logout'); ?>" class="dropdown-item">Keluar</a>
+                <a href="<?php echo base_url('Dashboard/Login/logout'); ?>" class="dropdown-item">Keluar</a>
             </div>
         </li>
     </ul>

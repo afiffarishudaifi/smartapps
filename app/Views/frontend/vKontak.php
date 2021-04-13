@@ -35,7 +35,7 @@
 			                <p><?php echo $session->getFlashdata('error'); ?></p>
 			            </div>
 			        <?php } ?>
-						<form class="form-horizontal" action="<?php echo base_url('public/frontend/Frontend/send_mail') ?>" method="post" data-parsley-validate="true">
+						<form class="form-horizontal" action="<?php echo base_url('frontend/Frontend/send_mail') ?>" method="post" data-parsley-validate="true">
 								<div class="form-group row m-b-15">
 									<label class="col-form-label col-lg-3 text-lg-right">Nama <span class="text-primary">*</span></label>
 									<div class="col-lg-9">

@@ -77,7 +77,7 @@
                                         <td>
                                             <center>
                                                 <img class="img-rounded" style="width: 60px; height: 80px;"
-                                                    src="<?= 'http://localhost/api_smartapps//public/' . $item['FOTO_PENGADUAN']; ?>">
+                                                    src="<?= 'http://localhost/api_smartapps/public/' . $item['FOTO_PENGADUAN']; ?>">
                                             </center>
                                         </td>
                                         <td><?= $item['STATUS_PENGADUAN']; ?></td>
@@ -104,7 +104,7 @@
         <!-- end #content -->
 
         <!-- Modal Selesai Class-->
-        <form action="<?php echo base_url('public/User/M_validasi/validasi_pengaduan'); ?>" method="post">
+        <form action="<?php echo base_url('User/M_validasi/validasi_pengaduan'); ?>" method="post">
             <div class="modal fade" id="validasiModalSelesai" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -170,7 +170,7 @@
     $(document).ready(function() {
         setInterval(function() {
             $.ajax({
-                url: "<?= base_url() ?>/public/User/Dashboard/jumlah_pengajuan",
+                url: "<?= base_url() ?>/User/Dashboard/jumlah_pengajuan",
                 type: "POST",
                 dataType: "json",
                 data: {},

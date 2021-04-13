@@ -11,9 +11,9 @@ class Login extends BaseController
     {
         $session = session();
         if ($session->get('username_login') && $session->get('level_login') == 'Admin') {
-            return redirect()->to('/smartapps/public/Dashboard/Dashboard');
+            return redirect()->to('/smartapps/Dashboard/Dashboard');
         } else if ($session->get('username_login') && $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/User/Dashboard');
+            return redirect()->to('/smartapps/User/Dashboard');
         }
 
         helper(['form']);
@@ -46,10 +46,10 @@ class Login extends BaseController
                     'is_admin'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/smartapps/public/Dashboard/Dashboard');
+                return redirect()->to('/smartapps/Dashboard/Dashboard');
             } else {
                 $session->setFlashdata('msg', 'Password Tidak Sesuai');
-                return redirect()->to('/smartapps/public/Dashboard/Login');
+                return redirect()->to('/smartapps/Dashboard/Login');
             }
         } else {
             $data_admin = $model->get_login_admin($username);
@@ -68,14 +68,14 @@ class Login extends BaseController
                     ];
                     // dd($ses_data);
                     $session->set($ses_data);
-                    return redirect()->to('/smartapps/public/Dashboard/Dashboard');
+                    return redirect()->to('/smartapps/Dashboard/Dashboard');
                 } else {
                     $session->setFlashdata('msg', 'Password Tidak Sesuai');
-                    return redirect()->to('/smartapps/public/Dashboard/Login');
+                    return redirect()->to('/smartapps/Dashboard/Login');
                 }
             } else {
                 $session->setFlashdata('msg', 'Username Tidak di Temukan');
-                return redirect()->to('/smartapps/public/Dashboard/Login');
+                return redirect()->to('/smartapps/Dashboard/Login');
             }
         }
     }
@@ -83,6 +83,6 @@ class Login extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/smartapps/public/Dashboard/Login');
+        return redirect()->to('/smartapps/Dashboard/Login');
     }
 }

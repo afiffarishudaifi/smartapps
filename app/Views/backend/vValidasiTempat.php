@@ -105,7 +105,7 @@
         <!-- end #content -->
 
         <!-- Modal Validasi Class-->
-        <form action="<?php echo base_url('public/Dashboard/M_validasi_tempat/validasi_tempat'); ?>" method="post">
+        <form action="<?php echo base_url('Dashboard/M_validasi_tempat/validasi_tempat'); ?>" method="post">
             <div class="modal fade" id="validasieModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -134,7 +134,7 @@
         <!-- End Modal Validasi Class-->
 
          <!-- Modal Validasi Class-->
-        <form action="<?php echo base_url('public/Dashboard/M_validasi_tempat/validasi_tempat'); ?>" method="post">
+        <form action="<?php echo base_url('Dashboard/M_validasi_tempat/validasi_tempat'); ?>" method="post">
             <div class="modal fade" id="validasieHapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">

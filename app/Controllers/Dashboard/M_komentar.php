@@ -21,7 +21,7 @@ class M_komentar extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -45,7 +45,7 @@ class M_komentar extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         };
 
         $model_dash = new Model_dashboard();
@@ -69,7 +69,7 @@ class M_komentar extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         helper(['form', 'url']);
 
@@ -79,7 +79,7 @@ class M_komentar extends BaseController
             'id_tempat' => 'required'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_komentar/form_tambah'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_komentar/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -90,14 +90,14 @@ class M_komentar extends BaseController
         $model = new Model_komentar();
         $model->add_data($data);
         $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
-        return redirect()->to(base_url('public/Dashboard/M_komentar'));
+        return redirect()->to(base_url('Dashboard/M_komentar'));
     }
 
     public function detail_komentar($id)
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -123,7 +123,7 @@ class M_komentar extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         helper(['form', 'url']);
@@ -136,7 +136,7 @@ class M_komentar extends BaseController
             'id_tempat' => 'required'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_komentar/detail_komentar' . '/' . $id))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_komentar/detail_komentar' . '/' . $id))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -147,7 +147,7 @@ class M_komentar extends BaseController
         );
         $model->update_data($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil diubah');
-        return redirect()->to(base_url('public/Dashboard/M_komentar'));
+        return redirect()->to(base_url('Dashboard/M_komentar'));
     }
 
     public function delete_komentar()
@@ -157,7 +157,7 @@ class M_komentar extends BaseController
         $session = session();
         $model->delete_data($id);
         session()->setFlashdata('sukses', 'Data sudah berhasil dihapus');
-        return redirect()->to('/smartapps/public/Dashboard/M_komentar');
+        return redirect()->to('/smartapps/Dashboard/M_komentar');
     }
 
     // ====== KOMENTAR ====== //

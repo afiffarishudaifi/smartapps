@@ -31,7 +31,7 @@
             <?php } ?>
             <!-- begin breadcrumb -->
             <ol class="breadcrumb float-xl-right">
-                <a href="<?php echo base_url('public/Dashboard/M_kategori_tempat/form_tambah') ?>" type="button"
+                <a href="<?php echo base_url('Dashboard/M_kategori_tempat/form_tambah') ?>" type="button"
                     class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Data</a>
             </ol>
             <!-- end breadcrumb -->
@@ -104,7 +104,7 @@
         <!-- end #content -->
 
         <!-- Modal Delete Class-->
-        <form action="<?php echo base_url('public/Dashboard/M_kategori_tempat/delete_kategori_tempat'); ?>"
+        <form action="<?php echo base_url('Dashboard/M_kategori_tempat/delete_kategori_tempat'); ?>"
             method="post">
             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">

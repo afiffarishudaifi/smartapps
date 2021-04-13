@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png">
+    <link rel="icon" type="image/png" href="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
     <title><?= $judul ?></title>
     <!-- <title>LOGIN | PENGELOLAAN SMARTAPPS</title> -->
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
@@ -78,7 +78,7 @@
                       </button>
                     </div>
                     <?php endif; ?>
-                    <form action="<?php echo base_url('public/Dashboard/Login/login') ?>" method="POST" class="margin-bottom-0" data-parsley-validate="true">
+                    <form action="<?php echo base_url('Dashboard/Login/login') ?>" method="POST" class="margin-bottom-0" data-parsley-validate="true">
                         <div class="form-group m-b-15">
                             <input type="text" class="form-control form-control-lg" name="username" id="username" 
                                 data-parsley-required="true" placeholder="Masukkan Username" autofocus />
@@ -89,7 +89,7 @@
                         </div>
                         <div class="login-buttons">
                             <button type="submit" class="btn btn-primary btn-block btn-lg">Masuk</button>
-                            <a href="<?= base_url('public/Frontend/Frontend')?>" class="btn btn-danger btn-block btn-lg">Batal</a>
+                            <a href="<?= base_url('Frontend/Frontend')?>" class="btn btn-danger btn-block btn-lg">Batal</a>
                         </div>
                         </div>
                         <hr />

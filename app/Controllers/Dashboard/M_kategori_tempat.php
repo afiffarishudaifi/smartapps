@@ -21,7 +21,7 @@ class M_kategori_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -45,7 +45,7 @@ class M_kategori_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         };
 
         $model_dash = new Model_dashboard();
@@ -69,7 +69,7 @@ class M_kategori_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -82,7 +82,7 @@ class M_kategori_tempat extends BaseController
             'nama_kategori' => 'required|is_unique[t_kategori_tempat.NAMA_KATEGORI_TEMPAT]'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_kategori_tempat/form_tambah'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_kategori_tempat/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -91,14 +91,14 @@ class M_kategori_tempat extends BaseController
         $model = new Model_kategori_tempat();
         $model->add_data($data);
         $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
-        return redirect()->to(base_url('public/Dashboard/M_kategori_tempat'));
+        return redirect()->to(base_url('Dashboard/M_kategori_tempat'));
     }
 
     public function detail_kategori_tempat($id)
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -124,7 +124,7 @@ class M_kategori_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         helper(['form', 'url']);
         $model = new Model_kategori_tempat();
@@ -143,7 +143,7 @@ class M_kategori_tempat extends BaseController
             'nama_kategori' => $rule_kategori
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_kategori_tempat/detail_kategori_tempat' . '/' . $id))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_kategori_tempat/detail_kategori_tempat' . '/' . $id))->withInput()->with('validation', $validation);
         }
 
         $data = array(
@@ -153,7 +153,7 @@ class M_kategori_tempat extends BaseController
 
         $model->update_data($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil diubah');
-        return redirect()->to(base_url('public/Dashboard/M_kategori_tempat'));
+        return redirect()->to(base_url('Dashboard/M_kategori_tempat'));
     }
 
     public function delete_kategori_tempat()
@@ -168,7 +168,7 @@ class M_kategori_tempat extends BaseController
         } else {
             session()->setFlashdata('sukses', 'Data ini dipakai di tabel lain dan tidak bisa dihapus');
         }
-        return redirect()->to('/smartapps/public/Dashboard/M_kategori_tempat');
+        return redirect()->to('/smartapps/Dashboard/M_kategori_tempat');
     }
 
     // ====== KATEGORI TEMPAT ====== //

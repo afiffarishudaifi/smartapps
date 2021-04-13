@@ -21,7 +21,7 @@ class M_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -45,7 +45,7 @@ class M_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -97,7 +97,7 @@ class M_tempat extends BaseController
                     }
                 }
                 $session->setFlashdata('sukses', 'Data telah berhasil ditambah');                
-                return redirect()->to(base_url('public/Dashboard/M_tempat'));
+                return redirect()->to(base_url('Dashboard/M_tempat'));
             } else {
                 session()->setFlashdata('eror', \Config\Services::validation()->listErrors());
                 $model = new Model_tempat();
@@ -131,7 +131,7 @@ class M_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -156,7 +156,7 @@ class M_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -179,7 +179,7 @@ class M_tempat extends BaseController
             $model = new Model_tempat();
             $model->update_data($data, $id);
             $session->setFlashdata('sukses', 'Data telah berhasil diubah');
-            return redirect()->to(base_url('public/Dashboard/M_tempat'));
+            return redirect()->to(base_url('Dashboard/M_tempat'));
         } else {
             $model = new Model_tempat();
             $tempat = $model->detail_data($id);
@@ -203,7 +203,7 @@ class M_tempat extends BaseController
         $model->delete_data($id);
         $session = session();
         $session->setFlashdata('sukses', 'Data sudah berhasil dihapus');
-        return redirect()->to('/smartapps/public/Dashboard/M_tempat');
+        return redirect()->to('/smartapps/Dashboard/M_tempat');
     }
 
     // ======= TEMPAT ======= //

@@ -12,7 +12,7 @@ $session = session();
                     <div class="cover with-shadow"></div>
                     <div class="image">
                         <center>
-                            <img src="<?= 'http://localhost/api_smartapps//public/' . $session->get('foto_login'); ?>" />
+                            <img src="<?= 'http://localhost/api_smartapps/public/' . $session->get('foto_login'); ?>" />
                         </center>
                     </div>
                     <div class="info">
@@ -30,7 +30,7 @@ $session = session();
                         if ($uri->getSegment(2) == 'Dashboard') {
                             echo "active";
                         } ?>">
-                <a href="<?php echo base_url('public/User/Dashboard'); ?>">
+                <a href="<?php echo base_url('User/Dashboard'); ?>">
                     <i class="fa fa-home"></i>
                     <span>Dashboard</span>
                 </a>
@@ -48,13 +48,13 @@ $session = session();
                     <li class="<?php
                             if ($uri->getSegment(2) == 'M_kategori_pengaduan') {
                                 echo "active";
-                            } ?>"><a href="<?php echo base_url('public/User/M_kategori_pengaduan'); ?>">
+                            } ?>"><a href="<?php echo base_url('User/M_kategori_pengaduan'); ?>">
                         <i class="fa fa-folder-open"></i> &nbsp;Kategori Pengaduan</a>
                     </li>
                     <li class="<?php
                             if ($uri->getSegment(2) == 'M_pengaduan') {
                                 echo "active";
-                            } ?>"><a href="<?php echo base_url('public/User/M_pengaduan'); ?>">
+                            } ?>"><a href="<?php echo base_url('User/M_pengaduan'); ?>">
                         <i class="fa fa-folder"></i> &nbsp;Pengaduan</a>
                     </li>
                 </ul>
@@ -72,7 +72,7 @@ $session = session();
                     <li class="<?php
                             if ($uri->getSegment(2) == 'M_validasi') {
                                 echo "active";
-                            } ?>"><a href="<?php echo base_url('public/User/M_validasi'); ?>">
+                            } ?>"><a href="<?php echo base_url('User/M_validasi'); ?>">
                         <i class="fa fa-check-circle"></i> &nbsp;Validasi Pengaduan</a>
                     </li>
                 </ul>
@@ -81,7 +81,7 @@ $session = session();
                         if ($uri->getSegment(2) == 'M_laporan') {
                             echo "active";
                         } ?>">
-                <a href="<?php echo base_url('public/User/M_laporan'); ?>">
+                <a href="<?php echo base_url('User/M_laporan'); ?>">
                     <i class="fa fa-archive"></i>
                     <span>Laporan Pengaduan</span>
                 </a>

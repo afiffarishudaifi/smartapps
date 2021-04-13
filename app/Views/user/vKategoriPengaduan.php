@@ -30,7 +30,7 @@
             <?php } ?>
             <!-- begin breadcrumb -->
             <ol class="breadcrumb float-xl-right">
-                <a href="<?php echo base_url('public/User/M_kategori_pengaduan/add_kategori_pengaduan') ?>"
+                <a href="<?php echo base_url('User/M_kategori_pengaduan/add_kategori_pengaduan') ?>"
                     type="button" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Tambah Data</a>
             </ol>
             <!-- end breadcrumb -->
@@ -103,7 +103,7 @@
         <!-- end #content -->
 
         <!-- Modal Delete Class-->
-        <form action="<?php echo base_url('public/User/M_kategori_pengaduan/delete_kategori_pengaduan'); ?>"
+        <form action="<?php echo base_url('User/M_kategori_pengaduan/delete_kategori_pengaduan'); ?>"
             method="post">
             <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -174,7 +174,7 @@
     $(document).ready(function() {
         setInterval(function() {
             $.ajax({
-                url: "<?= base_url() ?>/public/User/Dashboard/jumlah_pengajuan",
+                url: "<?= base_url() ?>/User/Dashboard/jumlah_pengajuan",
                 type: "POST",
                 dataType: "json",
                 data: {},

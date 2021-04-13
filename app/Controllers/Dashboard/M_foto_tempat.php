@@ -22,7 +22,7 @@ class M_foto_tempat extends BaseController
 	{
 		$session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -47,7 +47,7 @@ class M_foto_tempat extends BaseController
 	{
 		$session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -90,7 +90,7 @@ class M_foto_tempat extends BaseController
                 }
                 
                 $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
-                return redirect()->to(base_url('public/Dashboard/M_foto_tempat/view/' . '/' . $id));
+                return redirect()->to(base_url('Dashboard/M_foto_tempat/view/' . '/' . $id));
             } else {
                 session()->setFlashdata('eror', \Config\Services::validation()->listErrors());$data =
                 [
@@ -120,7 +120,7 @@ class M_foto_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -145,7 +145,7 @@ class M_foto_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -185,7 +185,7 @@ class M_foto_tempat extends BaseController
                     );
                     $model->update_data($data, $id);
                     $session->setFlashdata('sukses', 'Data sudah berhasil di Ubah');
-                    return redirect()->to(base_url('public/Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
+                    return redirect()->to(base_url('Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
                 } else {
                     $avatar      = $this->request->getFile('file');
                     $namabaru     = $avatar->getRandomName();
@@ -202,12 +202,12 @@ class M_foto_tempat extends BaseController
                     if (file_exists($data['gambar'])) {
                         unlink($data['gambar']);
                     }
-                    return redirect()->to(base_url('public/Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
+                    return redirect()->to(base_url('Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
                 }
             }
         } else {
             $id_tempat = $this->request->getVar('id_tempat');
-            return redirect()->to(base_url('public/Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
+            return redirect()->to(base_url('Dashboard/M_foto_tempat/view' . '/' . $id_tempat));
         }
     }
 
@@ -219,6 +219,6 @@ class M_foto_tempat extends BaseController
         $model->delete_data($id, $id_tempat);
         $session = session();
         $session->setFlashdata('sukses', 'Data sudah berhasil dihapus');
-        return redirect()->to('/smartapps/public/Dashboard/M_foto_tempat/view' . '/' . $id_tempat);
+        return redirect()->to('/smartapps/Dashboard/M_foto_tempat/view' . '/' . $id_tempat);
     }
 }

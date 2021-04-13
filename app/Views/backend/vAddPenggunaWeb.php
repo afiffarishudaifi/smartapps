@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png">
+    <link rel="icon" type="image/png" href="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
     <title><?= $judul; ?></title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
@@ -81,7 +81,7 @@
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     </div>
                     <?php endif ?>
-                    <form action="<?php echo base_url('public/Dashboard/M_pengguna_web/add_pengguna_web') ?>"
+                    <form action="<?php echo base_url('Dashboard/M_pengguna_web/add_pengguna_web') ?>"
                         method="POST" enctype="multipart/form-data" class="form-horizontal" data-parsley-validate="true"
                         name="demo-form">
                         <?= csrf_field(); ?>
@@ -128,7 +128,7 @@
                         <div class="form-group row m-b-15">
                             <label class="col-md-3 col-sm-3 col-form-label" for="title">No Telp Pengguna Web</label>
                             <div class="col-md-9 col-sm-9">
-                                <input class="form-control <?= ($validation->hasError('no_telp_web')) ? 'is-invalid' : ''; ?>" type="text" id="no_telp_web" name="no_telp_web" placeholder="No Telp Pengguna Web" 
+                                <input class="form-control <?= ($validation->hasError('no_telp_web')) ? 'is-invalid' : ''; ?>" type="text" id="no_telp_web" data-parsley-minlength="10" name="no_telp_web" placeholder="No Telp Pengguna Web" 
                                  value="<?= old('no_telp_web'); ?>" data-parsley-required="true" data-parsley-type="number" />
                                 <div class="invalid-feedback">
                                   <?= $validation->getError('no_telp_web'); ?>
@@ -162,7 +162,7 @@
                             <label class="col-md-3 col-sm-3 col-form-label">&nbsp;</label>
                             <div class="col-md-9 col-sm-9">
                                 <button type="submit" name="tambah" class="btn btn-success">SIMPAN</button>
-                                <a href="<?php echo base_url('public/Dashboard/M_pengguna_web') ?>" type="button"
+                                <a href="<?php echo base_url('Dashboard/M_pengguna_web') ?>" type="button"
                                     class="btn btn-danger">BATAL</a>
                             </div>
                         </div>

@@ -21,7 +21,7 @@ class M_pengaduan extends BaseController
         $session = session();
         
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -46,7 +46,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -71,7 +71,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         };
 
         $model_dash = new Model_dashboard();
@@ -95,7 +95,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
        if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         helper(['form', 'url']);
@@ -106,7 +106,7 @@ class M_pengaduan extends BaseController
             'file'=> 'mime_in[file,image/jpg,image/jpeg,image/png]|max_size[file,1024]'
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to(base_url('public/Dashboard/M_pengaduan/form_tambah'))->withInput()->with('validation', $validation);
+            return redirect()->to(base_url('Dashboard/M_pengaduan/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $avatar      = $this->request->getFile('file');
@@ -150,14 +150,14 @@ class M_pengaduan extends BaseController
                 unlink($data['filename']);
             }
         }
-        return redirect()->to(base_url('public/Dashboard/M_pengaduan'));
+        return redirect()->to(base_url('Dashboard/M_pengaduan'));
     }
 
     public function detail_pengaduan($id)
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -183,7 +183,7 @@ class M_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         if (isset($_POST['edit'])) {
             helper(['form', 'url']);
@@ -237,9 +237,9 @@ class M_pengaduan extends BaseController
                 }
             }
             $session->setFlashdata('sukses', 'Data sudah berhasil Diubah');
-            return redirect()->to(base_url('public/Dashboard/M_pengaduan'));
+            return redirect()->to(base_url('Dashboard/M_pengaduan'));
         } else {
-            return redirect()->to('public/Dashboard/M_pengaduan');
+            return redirect()->to('Dashboard/M_pengaduan');
         }
     }
 
@@ -250,7 +250,7 @@ class M_pengaduan extends BaseController
         $model->delete_data($id);
         $session = session();
         $session->setFlashdata('sukses', 'Data sudah berhasil dihapus');
-        return redirect()->to('/smartapps/public/Dashboard/M_pengaduan');
+        return redirect()->to('/smartapps/Dashboard/M_pengaduan');
     }
 
     // ======= KATEGORI PENGADUAN ======= //

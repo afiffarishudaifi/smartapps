@@ -29,7 +29,7 @@
 								<div class="image">
 									<br>
 									<br>
-									<img src="<?= base_url()?>/public/docs/admin/assets/img/foto_logo/logo.png" alt="Sean Ngu" />
+									<img src="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png" alt="Sean Ngu" />
 								</div>
 								<div class="info">
 									<p align="center">

@@ -22,7 +22,7 @@ class M_validasi_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -46,7 +46,7 @@ class M_validasi_tempat extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
         $id = $this->request->getVar('id_tempat');
         $data = array(
@@ -56,7 +56,7 @@ class M_validasi_tempat extends BaseController
         $model = new Model_validasi();
         $model->update_data($data, $id);
         $session->setFlashdata('sukses', 'Data telah berhasil divalidasi');
-        return redirect()->to(base_url('public/Dashboard/M_validasi_tempat'));
+        return redirect()->to(base_url('Dashboard/M_validasi_tempat'));
     }
 
     // ======= TEMPAT ======= //

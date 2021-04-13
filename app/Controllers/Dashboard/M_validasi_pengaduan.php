@@ -22,7 +22,7 @@ class M_validasi_pengaduan extends BaseController
         $session = session();
         
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -46,7 +46,7 @@ class M_validasi_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         $model_dash = new Model_dashboard();
@@ -72,7 +72,7 @@ class M_validasi_pengaduan extends BaseController
     {
         $session = session();
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
-            return redirect()->to('/smartapps/public/Dashboard/Login');
+            return redirect()->to('/smartapps/Dashboard/Login');
         }
 
         helper(['form', 'url']);
@@ -84,7 +84,7 @@ class M_validasi_pengaduan extends BaseController
         );
         $model->update_data_pengaduan($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil divalidasi');
-        return redirect()->to(base_url('public/Dashboard/M_validasi_pengaduan'));
+        return redirect()->to(base_url('Dashboard/M_validasi_pengaduan'));
     }
     // ======= KATEGORI PENGADUAN ======= //
 }

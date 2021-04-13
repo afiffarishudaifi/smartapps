@@ -93,7 +93,7 @@ messaging.onMessage((data) => {
 $(document).ready(function(){
     setInterval(function(){
         $.ajax({
-            url:"<?= base_url()?>/public/Dashboard/Dashboard/jumlah_pengajuan",
+            url:"<?= base_url()?>/Dashboard/Dashboard/jumlah_pengajuan",
             type:"POST",
             dataType:"json",
             data:{},
