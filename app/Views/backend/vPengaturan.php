@@ -112,7 +112,7 @@
                         <div class="form-group row m-b-0">
                             <label class="col-md-3 col-sm-3 col-form-label">&nbsp;</label>
                             <div class="col-md-9 col-sm-9">
-                                <button id="btn-simpan" class="btn btn-success">SIMPAN</button>
+                                <button id="btn-simpan" class="btn btn-success" data-toggle="modal" data-target="#logoutPengaturan">SIMPAN</button>
                                 <a href="<?php echo base_url('Dashboard/Dashboard') ?>" type="button"
                                     class="btn btn-danger">BATAL</a>
                             </div>
@@ -124,6 +124,24 @@
             <!-- end panel -->
         </div>
         <!-- end #content -->
+
+        <!-- begin modal logout -->
+        <div class="modal" id="logoutPengaturan" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+               <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pemberitahuan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+              <div class="modal-body">
+                <p><i class="fa fa-notice-circle"></i> Anda harus login lagi <br /></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end modal logout -->
 
         <!-- begin scroll to top btn -->
         <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade"
@@ -144,11 +162,11 @@
     <script src="<?php echo base_url('docs/admin/assets/plugins/parsleyjs/dist/parsley.min.js') ?>"></script>
     <script src="<?php echo base_url('docs/admin/assets/plugins/highlight.js/highlight.min.js') ?>"></script>
     <script src="<?php echo base_url('docs/admin/assets/js/demo/render.highlight.js') ?>"></script>
-    <script type="text/javascript">
+   <!--  <script type="text/javascript">
     $('#btn-simpan').on('click', function() {
         alert('Anda Harus Login Lagi!');
     });
-    </script>
+    </script> -->
     <!-- ================== END PAGE LEVEL JS ================== -->
 
 </body>
