@@ -21,7 +21,6 @@ class Login extends BaseController
             'judul' => 'Login || SIPESAR'
         ];
         return view('backend/vLogin', $data);
-        // return view('backend/vLogin');
     }
 
     public function login()
@@ -66,7 +65,6 @@ class Login extends BaseController
                         'logged_in'     => TRUE,
                         'is_admin'     => TRUE
                     ];
-                    // dd($ses_data);
                     $session->set($ses_data);
                     return redirect()->to('/smartapps/Dashboard/Dashboard');
                 } else {

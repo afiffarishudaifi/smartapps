@@ -67,8 +67,10 @@
       <div class="modal-body">
         <p><i class="fa fa-question-circle"></i> Apakah anda yakin ingin keluar? <br /></p>
         <div class="actionsBtns">
-            <a href="<?php echo base_url('Dashboard/Login/logout'); ?>" class="btn btn-default btn-danger">Keluar</a>
-            <button class="btn btn-default" data-dismiss="modal">Batal</button>
+            <center>
+                <a href="<?php echo base_url('Dashboard/Login/logout'); ?>" class="btn btn-default btn-danger">Keluar</a>
+                <button class="btn btn-default" data-dismiss="modal">Batal</button>
+            </center>
         </div>
       </div>
     </div>

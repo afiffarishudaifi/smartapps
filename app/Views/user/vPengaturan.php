@@ -200,7 +200,7 @@
         <!-- end #content -->
 
         <!-- begin modal logout pengaturan -->
-        <div class="modal" id="logoutPengaturan" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal" id="logoutPengaturan" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog modal-sm">
             <div class="modal-content">
                <div class="modal-header">
@@ -210,7 +210,7 @@
                 </button>
             </div>
               <div class="modal-body">
-                <p><i class="fa fa-notice-circle"></i> Anda harus login lagi <br /></p>
+                <p><i class="fa fa-notice-circle"></i>Anda harus login lagi apabila berhasil pengaturan akun<br /></p>
               </div>
             </div>
           </div>

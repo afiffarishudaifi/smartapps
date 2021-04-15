@@ -66,11 +66,10 @@
       <div class="modal-body">
         <p><i class="fa fa-question-circle"></i> Apakah anda yakin ingin keluar? <br /></p>
         <div class="actionsBtns">
-            <form action="/logout" method="post">
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <center>
                 <a href="<?php echo base_url('Dashboard/Login/logout'); ?>" class="btn btn-default btn-danger">Keluar</a>
                 <button class="btn btn-default" data-dismiss="modal">Batal</button>
-            </form>
+            </center>
         </div>
       </div>
     </div>

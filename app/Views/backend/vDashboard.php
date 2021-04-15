@@ -41,7 +41,7 @@
 
     <!-- begin #page-container -->
     <div id="page-container"
-        class="fade page-sidebar-fixed page-header-fixed page-with-wide-sidebar page-with-light-sidebar page-sidebar-minified">
+        class="fade page-sidebar-fixed page-header-fixed page-with-wide-sidebar page-with-light-sidebar">
         <!-- begin #header -->
         <?= $this->include("backend/template/header") ?>
         <!-- end #header -->

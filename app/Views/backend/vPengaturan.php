@@ -136,7 +136,7 @@
                 </button>
             </div>
               <div class="modal-body">
-                <p><i class="fa fa-notice-circle"></i> Anda harus login lagi <br /></p>
+                <p><i class="fa fa-notice-circle"></i>Anda harus login lagi apabila berhasil pengaturan akun<br /></p>
               </div>
             </div>
           </div>
