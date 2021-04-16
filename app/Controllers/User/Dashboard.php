@@ -46,11 +46,11 @@ class Dashboard extends BaseController
         if ($hasil == 0) {
             $data_pengaduan = array(
                 "0" => array(
-                    "WAKTU_PENGADUAN" => $awal,
+                    "date(WAKTU_PENGADUAN)" => $awal,
                     "ID_PENGADUAN" => "0"
                 ),
                 "1" => array(
-                    "WAKTU_PENGADUAN" => $akhir,
+                    "date(WAKTU_PENGADUAN)" => $akhir,
                     "ID_PENGADUAN" => "0"
                 )
             );

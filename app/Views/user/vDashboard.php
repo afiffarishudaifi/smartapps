@@ -144,7 +144,7 @@
                         <!-- statistik -->
                         <?php
                         foreach ($pengaduan as $data) {
-                            $tanggal[] = $data['WAKTU_PENGADUAN'];
+                            $tanggal[] = $data['date(WAKTU_PENGADUAN)'];
                             $jml[] = $data['ID_PENGADUAN'];
 
                             // echo json_encode($tanggal);

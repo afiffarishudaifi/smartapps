@@ -84,7 +84,7 @@
                                         <td>
                                             <center>
                                                 <img class="img-rounded" style="width: 60px; height: 80px;"
-                                                    src="<?= 'http://localhost/api_smartapps//public/' . $item['FOTO_PENGADUAN']; ?>">
+                                                    src="<?= 'http://localhost/api_smartapps/' . $item['FOTO_PENGADUAN']; ?>">
                                             </center>
                                         </td>
                                         <td><?= $item['STATUS_PENGADUAN']; ?></td>
