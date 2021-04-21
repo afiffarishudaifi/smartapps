@@ -27,13 +27,13 @@
         <li class="navbar-form flex-grow-1">
         </li>
         <li class="total_tempat">
-            <a href="<?php echo base_url('Dashboard/M_validasi_tempat'); ?>" data-toggle="">
+            <a href="<?php echo base_url('Dashboard/M_validasi_tempat'); ?>" data-toggle="tooltip" data-placement="top" title="Validasi Tempat">
                 <i class="fa fa-check"></i>
                 <span class="label label-primary" id="total_tempat"><?= $jml_tempat['ID_TEMPAT']; ?></span>
             </a>
         </li>
         <li class="total_pengaduan">
-            <a href="<?php echo base_url('Dashboard/M_validasi_pengaduan'); ?>" data-toggle="">
+            <a href="<?php echo base_url('Dashboard/M_validasi_pengaduan'); ?>" data-toggle="tooltip" data-placement="top" title="Validasi Pengaduan">
                 <i class="fa fa-check-circle"></i>
                 <span class="label label-primary" id="total_pengaduan"><?= $jml_pengaduan['ID_PENGADUAN']; ?></span>
             </a>
@@ -76,14 +76,3 @@
   </div>
 </div>
 <!-- end modal logout -->
-
-<style>
-.total_tempat:hover {
-    background-color: aqua;
-
-}
-
-.total_pengaduan:hover {
-    background-color: aqua;
-}
-</style>

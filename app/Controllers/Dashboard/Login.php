@@ -77,6 +77,55 @@ class Login extends BaseController
             }
         }
     }
+
+    public function resetPassword()
+    {
+
+        session();
+        $data = [
+            'judul' => 'Reset Password || SIPESAR',
+            'validation' => \Config\Services::validation()
+        ];
+        return view('backend/vResetPassword', $data);
+    }
+
+    public function check()
+    {
+        $model = new Model_login();
+        $session = session();
+        $encrypter = \Config\Services::encrypter();
+        $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
+
+        helper(['form', 'url']);
+        if (!$this->validate([
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'repassword' => 'required|matches[password]'
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->to(base_url('Dashboard/Login/resetPassword'))->withInput()->with('validation', $validation);
+        }
+
+        $data_cek = $model->cek_user($email, $username);
+        if ($data_cek) {
+            $id = $data_cek['ID_WEB'];
+            $data = [
+                'username' => $username,
+                'password' => $password,
+                'email' => $email
+            ];
+            $reset = $model->reset_password($id, $data);
+            $session->setFlashdata('sukses', 'Password Sudah Berhasil Diubah');
+            return redirect()->to(base_url('Dashboard/Login/resetPassword'));
+        } else {
+            $session->setFlashdata('msg', 'Username Tidak di Temukan');
+            return redirect()->to(base_url('Dashboard/Login/resetPassword'))->withInput();
+        }
+    }
+
     public function logout()
     {
         $session = session();

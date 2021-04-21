@@ -28,7 +28,6 @@ class Model_kategori_pengaduan extends Model
     public function add_data($data)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -53,7 +52,6 @@ class Model_kategori_pengaduan extends Model
     public function update_data($data, $id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-
         $client = new Client([
             'base_uri' => $link,
         ]);

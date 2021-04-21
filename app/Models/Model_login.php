@@ -32,4 +32,27 @@ class Model_login extends Model
         $hasil = json_decode($response, true);
         return $hasil;
     }
+
+    public function cek_user($emai, $username)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+        $response = $client->request('GET', 'Login/cek_user/' . $username . '/' . $emai)->getBody()->getContents();
+        $hasil = json_decode($response, true);
+        return $hasil;
+    }
+
+    public function reset_password($id, $data)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+        $response = $client->request('POST', $link . 'Login/update_data/' . $id, [
+            'form_params' => $data
+        ]);
+        return $response;
+    }
 }

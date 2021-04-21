@@ -40,12 +40,6 @@
             <div class="news-feed">
                 <div class="news-image"
                     style="background-image: url(<?= base_url(); ?>/docs/admin/assets/img/login-bg/login.jpg)"></div>
-                <!-- <div class="news-caption">
-                    <h4 class="caption-title"><b>Simpel</b> Dasar App</h4>
-                    <p>
-                        Adalah sebuah sistem pengelolaan pengaduan yang disampaikan melalui Smartapps dan E-Complaint.
-                    </p>
-                </div> -->
             </div>
             <!-- end news-feed -->
             <!-- begin right-content -->
@@ -91,6 +85,8 @@
                             <button type="submit" class="btn btn-primary btn-block btn-lg">Masuk</button>
                             <a href="<?= base_url('Frontend/Frontend')?>" class="btn btn-danger btn-block btn-lg">Batal</a>
                         </div>
+                        <div class="m-t-30 m-b-30 p-b-30">
+                            Lupa password ? Click <a href="<?= base_url('Dashboard/Login/resetPassword')?>">Disini</a> untuk reset Password.
                         </div>
                         <hr />
                         <p class="text-center text-grey-darker mb-0">

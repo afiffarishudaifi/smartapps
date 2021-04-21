@@ -18,6 +18,7 @@ class Dashboard extends BaseController
         $model = new Model_dashboard_user();
         $id = $session->get('id_login');
         $tanggal = $this->request->getPost('daterange');
+        $token = $this->request->getPost('token');
         if ($tanggal == null && $tanggal == '') {
             $akhir = date('Y-m-d');
             $awal = date('Y-m-d', strtotime('-30 days', strtotime($akhir)));
@@ -34,6 +35,15 @@ class Dashboard extends BaseController
             }
             $range = $awal . ' s/d ' . $akhir;
         }
+
+        // begin insert token
+        // $data_token = [
+        //     'TOKEN' => $token,
+        //     'ID_PENGGUNA_APPS' => $id,
+        //     'ID_WEB' => ''
+        // ];
+        // $insert_token = $model->insert_token($data_token);
+        // end insert token
 
         $param =
             [

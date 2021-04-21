@@ -28,13 +28,13 @@
 
         </li>
         <li class="">
-            <a href="<?php echo base_url('User/M_validasi'); ?>" data-toggle="">
+            <a href="<?php echo base_url('User/M_validasi'); ?>" data-toggle="tooltip" data-placement="top" title="Validasi Pengaduan">
                 <i class="fa fa-check-circle"></i>
                 <span class="label label-primary" id="total_pengaduan"><?= $jml_pengaduan['ID_PENGADUAN']; ?></span>
             </a>
         </li>
         <li class="">
-            <a href="<?php echo base_url('User/M_validasi/index_penanganan'); ?>" data-toggle="">
+            <a href="<?php echo base_url('User/M_validasi/index_penanganan'); ?>" data-toggle="tooltip" data-placement="top" title="Validasi Penanganan">
                 <i class="fa fa-hourglass-half"></i>
                 <span class="label label-primary" id="total_penanganan"><?= $jml_penanganan['ID_PENGADUAN']; ?></span>
             </a>

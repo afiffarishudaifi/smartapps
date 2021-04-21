@@ -56,7 +56,8 @@ const messaging = firebase.messaging();
 messaging.getToken({
     vapidKey : 'BFaIvmTp2g0R2wL-IBLf7XzvDAbvm4Ax4vra4t5ONIha0b_h5kZcDgIfmpzrONCCp7mCP-5kFAJETxAHcwxNQiI'
 }).then((token) => {
-    console.log('getToken : ', token)
+    // console.log('getToken : ', token)
+    $('#token').val(data_token);
 });
 
 

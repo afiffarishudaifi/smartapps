@@ -127,6 +127,7 @@
                         <div class="panel-body pr-1">
                             <form action="<?php echo base_url('User/Dashboard') ?>" method="POST"
                                 id="filter_form">
+                                <input type="hidden" name="token" id="token">
                                 <?= csrf_field(); ?>
                                 <div class="form-row">
                                     <div class="d-sm-flex align-items-center mb-5">

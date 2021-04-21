@@ -80,12 +80,25 @@ class Model_dashboard_user extends Model
 
     public function view_detail_pengaduan($param, $id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
         $response = $client->request('GET', 'Dashboard/view_detail_pengaduan/' . $param .'/'.$id)->getBody()->getContents();
         $hasil = json_decode($response, true);
         return $hasil;
+    }
+
+    public function insert_token($data_token) 
+    {
+        $link = 'http://localhost/api_smartapps/User/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+
+        $response = $client->request('POST', $link . 'Dashboard/insert_token', [
+            'form_params' => $data_token
+        ]);
+        return $response;
     }
 }
