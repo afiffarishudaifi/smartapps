@@ -13,8 +13,6 @@ class Model_pengguna_web extends Model
     protected $createdField  = 'CREATED_AT';
     protected $updatedField  = 'UPDATED_AT';
 
-    //======= DINAS ======= //
-
     public function view_data()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
@@ -169,5 +167,13 @@ class Model_pengguna_web extends Model
         return $hasil;
     }
 
-    //======= DINAS ======= //
+    public function delete_token($id)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+        $response = $client->request('DELETE', 'M_pengguna_web/delete_token/' . $id)->getBody();
+        return json_decode($response, true);
+    }
 }

@@ -11,7 +11,6 @@ class Model_validasi_user extends Model
     protected $primaryKey = 'ID_TEMPAT';
     protected $useTimestamps = true;
 
-    // begin validasi Pengaduan //
     public function view_data_pengaduan()
     {
         $link = 'http://localhost/api_smartapps/User/';

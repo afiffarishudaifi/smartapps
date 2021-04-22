@@ -16,7 +16,6 @@ class M_tempat extends BaseController
     }
 
     // ======= TEMPAT ======= //
-
     public function index()
     {
         $session = session();
@@ -86,7 +85,7 @@ class M_tempat extends BaseController
                       if ($img->isValid() && ! $img->hasMoved())
                         {
                             $namabaru     = $img->getRandomName();
-                            $img->move('docs/admin/assets/img/foto_tempat', $namabaru);// Masuk database
+                            $img->move('docs/admin/assets/img/foto_tempat', $namabaru);
                             $data = array(
                                 'id_tempat'     => $id_max,
                                 'file'      => "docs/admin/assets/img/foto_tempat/" . $namabaru,

@@ -124,7 +124,6 @@ class Dashboard extends BaseController
     public function detail_tempat($param)
     {
         $session = session();
-        
         if (!$session->get('username_login') || $session->get('level_login') == 'User') {
             return redirect()->to('/smartapps/Dashboard/Login');
         }
@@ -144,5 +143,26 @@ class Dashboard extends BaseController
             'jml_pengaduan' => $jumlah_pengajuan_pengaduan
         ];
         return view('backend/vDetailTempat', $data);
+    }
+
+    public function saveToken($token)
+    {
+        $session = session();
+        $model = new Model_dashboard();
+        $id = $session->get('id_login');
+        $data = [
+            'TOKEN' => $token,
+            'ID_USER' => $id
+        ];
+        dd($data);
+        $data_token = $model->search_token($id);
+        if(!$data_token) {
+            $data = [
+                'TOKEN' => $token
+            ];            
+            $saveToken = $model->updateToken($id, $data);
+        } else {
+            $saveToken = $model->saveToken($data);
+        }
     }
 }

@@ -91,12 +91,12 @@
                                         <td>
                                             <center>
                                                 <a href="" type="button"
-                                                    onclick="validasi(<?= $item['ID_PENGADUAN']; ?>)"
+                                                    onclick="validasi(<?= $item['ID_PENGADUAN']; ?>,<?= $item['ID_WEB']; ?>)"
                                                     class="btn btn-circle btn-success"
                                                     data-toggle="modal" data-target="#validasiModal"><i
                                                         class="fa fa-check"></i></a>
                                                 <a href="" type="button"
-                                                    onclick="validasi(<?= $item['ID_PENGADUAN']; ?>)"
+                                                    onclick="validasi(<?= $item['ID_PENGADUAN']; ?>, <?= $item['ID_WEB']; ?>)"
                                                     class="btn btn-circle btn-danger"
                                                     data-toggle="modal" data-target="#validasieHapus"><i
                                                         class="fa fa-ban"></i></a>
@@ -136,6 +136,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_pengaduan" class="id_pengaduan">
+                            <input type="hidden" name="id_web" class="id_web">
                             <input type="hidden" name="status_pengaduan" class="status_pengaduan" value="Terkonfirmasi">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Validasi</button>
@@ -165,6 +166,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_pengaduan" class="id_pengaduan">
+                            <input type="text" name="id_web" class="id_web">
                             <input type="hidden" name="status_pengaduan" class="status_pengaduan" value="Ditolak">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Hapus</button>
@@ -184,13 +186,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-    function validasi(id) {
+    function validasi(id, web) {
         $('.id_pengaduan').val(id);
+        $('.id_web').val(web);
         $('#validasiModal').modal('show');
     };
 
-    function validasi_hapus(id){
+    function validasi_hapus(id, web){
         $('.id_pengaduan').val(id);
+        $('.id_web').val(web);
         $('#validasieHapus').modal('show');
     };
     </script>

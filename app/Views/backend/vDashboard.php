@@ -28,10 +28,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-<!-- Mapbox -->
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-
 <body>
     <!-- begin #page-loader -->
     <div id="page-loader" class="fade show">

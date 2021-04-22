@@ -57,8 +57,18 @@ messaging.getToken({
     vapidKey : 'BFaIvmTp2g0R2wL-IBLf7XzvDAbvm4Ax4vra4t5ONIha0b_h5kZcDgIfmpzrONCCp7mCP-5kFAJETxAHcwxNQiI'
 }).then((token) => {
     console.log('getToken : ', token)
+    saveToken(token);
 });
 
+function saveToken(token) {
+    $.ajax({
+        url: "<?= base_url()?>/Dashboard/Dashboard/saveToken/"+token,
+        method: "post",
+        data: "token=" + token
+    }).done(function(result){
+        // console.log(result);
+    })
+}
 
 
 messaging.onMessage((data) => {

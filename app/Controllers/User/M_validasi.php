@@ -53,7 +53,8 @@ class M_validasi extends BaseController
         $id = $this->request->getVar('id_pengaduan');
         $model = new Model_validasi_user();
         $data = array(
-            'status_pengaduan'    => $this->request->getVar('status_pengaduan')
+            'status_pengaduan'    => $this->request->getVar('status_pengaduan'),
+            'id_pengguna_apps'    => $this->request->getVar('id_pengguna_apps')
         );
         $model->update_data_pengaduan($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil divalidasi');

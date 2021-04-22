@@ -140,6 +140,7 @@ class Model_pengguna_apps extends Model
         ]);
         return $response;
     }
+    
     public function delete_data($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
@@ -181,5 +182,15 @@ class Model_pengguna_apps extends Model
         $response = $client->request('GET', 'M_pengguna_apps/cek_foreign_3/' . $id)->getBody()->getContents();
         $hasil = json_decode($response, true);
         return $hasil;
+    }
+
+    public function delete_token($id)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+        $response = $client->request('DELETE', 'M_pengguna_apps/delete_token/' . $id)->getBody();
+        return json_decode($response, true);
     }
 }

@@ -80,7 +80,8 @@ class M_validasi_pengaduan extends BaseController
         $image = \Config\Services::image();
         $model = new Model_validasi();
         $data = array(
-            'status_pengaduan'    => $this->request->getVar('status_pengaduan')
+            'status_pengaduan'    => $this->request->getVar('status_pengaduan'),
+            'id_web'    => $this->request->getVar('id_web')
         );
         $model->update_data_pengaduan($data, $id);
         $session->setFlashdata('sukses', 'Data sudah berhasil divalidasi');

@@ -154,4 +154,41 @@ class Model_dashboard extends Model
         $hasil = json_decode($response, true);
         return $hasil;
     }
+
+    public function saveToken($data)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+
+        $response = $client->request('POST', $link . 'Token/create', [
+            'form_params' => $data
+        ]);
+        return $response;
+    }
+
+    public function search_token($param)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+        $response = $client->request('GET', 'Token/show/' . $param)->getBody()->getContents();
+        $hasil = json_decode($response, true);
+        return $hasil;
+    }
+
+    public function updateToken($id, $param)
+    {
+        $link = 'http://localhost/api_smartapps/Admin/';
+        $client = new Client([
+            'base_uri' => $link,
+        ]);
+
+        $response = $client->request('PUT', $link . 'Token/update/' . $id, [
+            'form_params' => $param
+        ]);
+        return $response;
+    }
 }

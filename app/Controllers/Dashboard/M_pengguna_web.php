@@ -233,7 +233,7 @@ class M_pengguna_web extends BaseController
         $foreign_2 = $model->cek_foreign_2($id);
         if ($foreign_1 == 0 && $foreign_2 == 0) {
             $model->delete_data($id);
-            $session = session();
+            $model->delete_token($id);
             $session->setFlashdata('sukses', 'Data sudah berhasil dihapus');
         } else {
             session()->setFlashdata('sukses', 'Data ini dipakai di tabel lain dan tidak bisa dihapus');

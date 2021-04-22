@@ -36,15 +36,6 @@ class Dashboard extends BaseController
             $range = $awal . ' s/d ' . $akhir;
         }
 
-        // begin insert token
-        // $data_token = [
-        //     'TOKEN' => $token,
-        //     'ID_PENGGUNA_APPS' => $id,
-        //     'ID_WEB' => ''
-        // ];
-        // $insert_token = $model->insert_token($data_token);
-        // end insert token
-
         $param =
             [
                 'id' => $id,
@@ -131,5 +122,25 @@ class Dashboard extends BaseController
             'jml_ditolak' => $jumlah_ditolak
         ];
         return view('user/vDetailPengaduan', $data);
+    }
+
+    public function saveToken($token)
+    {
+        $session = session();
+        $model = new Model_dashboard();
+        $id = $session->get('id_login');
+        $data = [
+            'TOKEN' => $token,
+            'ID_WEB' => $id
+        ];
+        $data_token = $model->search_token($id);
+        if(!$data_token) {
+            $data = [
+                'TOKEN' => $token
+            ];      
+            $saveToken = $model->updateToken($data);
+        } else {
+            $saveToken = $model->saveToken($data);
+        }
     }
 }

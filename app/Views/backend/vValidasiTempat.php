@@ -82,9 +82,9 @@
                                             <center>
                                                 <a href="<?php base_url() ?>M_foto_tempat/view/<?php echo $item['ID_TEMPAT']; ?>" class="btn btn-circle btn-edit btn-aqua"><i
                                                 class="fas fa-file-image"></i></a>
-                                                <a href="" type="button" onclick="validasi(<?= $item['ID_TEMPAT']; ?>)" class="btn btn-circle btn-success" data-toggle="modal" data-target="#validasieModal"><i class="fa fa-check"></i></a>
+                                                <a href="" type="button" onclick="validasi(<?= $item['ID_TEMPAT']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)" class="btn btn-circle btn-success" data-toggle="modal" data-target="#validasieModal"><i class="fa fa-check"></i></a>
                                                 <a href="" type="button"
-                                                    onclick="validasi_hapus(<?= $item['ID_TEMPAT']; ?>)"
+                                                    onclick="validasi_hapus(<?= $item['ID_TEMPAT']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)"
                                                     class="btn btn-circle btn-danger"
                                                     data-toggle="modal" data-target="#validasieHapus"><i
                                                         class="fa fa-ban"></i></a>
@@ -123,6 +123,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_tempat" class="id_tempat">
+                            <input type="hidden" name="id_pengguna_apps" class="id_pengguna_apps">
                             <input type="hidden" name="status_tempat" class="status_tempat" value="Terkonfirmasi">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Validasi</button>
@@ -152,6 +153,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_tempat" class="id_tempat">
+                            <input type="hidden" name="id_pengguna_apps" class="id_pengguna_apps">
                             <input type="hidden" name="status_tempat" class="status_tempat" value="Ditolak">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Hapus</button>
@@ -171,12 +173,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-    function validasi(id){
+    function validasi(id, apps){
         $('.id_tempat').val(id);
+        $('.id_pengguna_apps').val(apps);
         $('#validasiModal').modal('show');
     };
-    function validasi_hapus(id){
+    function validasi_hapus(id, apps){
         $('.id_tempat').val(id);
+        $('.id_pengguna_apps').val(apps);
         $('#validasieHapus').modal('show');
     };
     </script>
