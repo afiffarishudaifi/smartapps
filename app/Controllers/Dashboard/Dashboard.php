@@ -154,9 +154,8 @@ class Dashboard extends BaseController
             'TOKEN' => $token,
             'ID_USER' => $id
         ];
-        dd($data);
         $data_token = $model->search_token($id);
-        if(!$data_token) {
+        if($data_token) {
             $data = [
                 'TOKEN' => $token
             ];            

@@ -193,7 +193,22 @@
     <script src="<?php echo base_url('docs/admin/assets/plugins/parsleyjs/dist/parsley.min.js') ?>"></script>
     <script src="<?php echo base_url('docs/admin/assets/plugins/highlight.js/highlight.min.js') ?>"></script>
     <script src="<?php echo base_url('docs/admin/assets/js/demo/render.highlight.js') ?>"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setInterval(function(){
+                $.ajax({
+                    url:"<?= base_url()?>/Dashboard/Dashboard/jumlah_pengajuan",
+                    type:"POST",
+                    dataType:"json",
+                    data:{},
+                    success:function(data){
+                        $('#total_tempat').html(data.total_tempat);
+                        $('#total_pengaduan').html(data.total_pengaduan);
+                    }
+                })
+            }, 5000)
+        })
+    </script>
 </body>
 
 </html>

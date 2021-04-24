@@ -77,3 +77,20 @@
   </div>
 </div>
 <!-- end modal logout -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setInterval(function() {
+            $.ajax({
+                url: "<?= base_url() ?>/User/Dashboard/jumlah_pengajuan",
+                type: "POST",
+                dataType: "json",
+                data: {},
+                success: function(data) {
+                    $('#total_pengaduan').html(data.total_pengaduan);
+                    $('#total_penanganan').html(data.total_penanganan);
+                }
+            })
+        }, 5000)
+    })
+    </script>

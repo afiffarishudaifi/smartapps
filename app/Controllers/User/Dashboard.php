@@ -127,18 +127,18 @@ class Dashboard extends BaseController
     public function saveToken($token)
     {
         $session = session();
-        $model = new Model_dashboard();
+        $model = new Model_dashboard_user();
         $id = $session->get('id_login');
         $data = [
             'TOKEN' => $token,
             'ID_WEB' => $id
         ];
         $data_token = $model->search_token($id);
-        if(!$data_token) {
+        if($data_token) {
             $data = [
                 'TOKEN' => $token
             ];      
-            $saveToken = $model->updateToken($data);
+            $saveToken = $model->updateToken($id, $data);
         } else {
             $saveToken = $model->saveToken($data);
         }

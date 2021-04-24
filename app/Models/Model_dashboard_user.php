@@ -126,7 +126,7 @@ class Model_dashboard_user extends Model
         return $hasil;
     }
 
-    public function updateToken($id, $param)
+    public function updateToken($id, $data)
     {
         $link = 'http://localhost/api_smartapps/User/';
         $client = new Client([
@@ -134,7 +134,7 @@ class Model_dashboard_user extends Model
         ]);
 
         $response = $client->request('PUT', $link . 'Token/update/' . $id, [
-            'form_params' => $param
+            'form_params' => $data
         ]);
         return $response;
     }

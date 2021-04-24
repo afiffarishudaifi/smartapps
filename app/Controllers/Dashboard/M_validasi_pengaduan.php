@@ -83,7 +83,9 @@ class M_validasi_pengaduan extends BaseController
             'status_pengaduan'    => $this->request->getVar('status_pengaduan'),
             'id_web'    => $this->request->getVar('id_web')
         );
+        
         $model->update_data_pengaduan($data, $id);
+
         $session->setFlashdata('sukses', 'Data sudah berhasil divalidasi');
         return redirect()->to(base_url('Dashboard/M_validasi_pengaduan'));
     }
