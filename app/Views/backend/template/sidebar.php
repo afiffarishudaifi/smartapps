@@ -119,6 +119,36 @@ $session = session();
                     </li>
                 </ul>
             </li>
+            <li class="has-sub <?php
+                                if ($uri->getSegment(2) == 'M_laporan') {
+                                    echo "active";
+                                } ?>">
+                <a href="javascript:;">
+                    <b class="caret"></b>
+                    <i class="material-icons">assignment</i>
+                    <span>Laporan</span>
+                </a>
+                <ul class="sub-menu">
+                     <li class="<?php
+                                if ($uri->getSegment(3) == 'laporan_pengaduan') {
+                                    echo "active";
+                                } ?>">
+                        <a href="<?php echo base_url('Dashboard/M_laporan/laporan_pengaduan'); ?>">
+                            <i class="fa fa-file-alt"></i>
+                            <span>Pengaduan</span>
+                        </a>
+                    </li>
+                     <li class="<?php
+                                if ($uri->getSegment(3) == 'laporan_tempat') {
+                                    echo "active";
+                                } ?>">
+                        <a href="<?php echo base_url('Dashboard/M_laporan/laporan_tempat'); ?>">
+                            <i class="fa fa-file-archive"></i>
+                            <span>Pengajuan Tempat</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
         <!-- end sidebar nav -->
     </div>
