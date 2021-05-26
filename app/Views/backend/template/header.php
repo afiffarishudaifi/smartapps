@@ -8,12 +8,14 @@
             <span class="icon-bar"></span>
         </button>
         <a href="" class="navbar-brand">
-            <b class="mr-1">Simpel</b>
+            <b class="mr-1">Sistem Pengelolaan Data Smartapps</b>
+            <!-- <b class="text-blue">S</b>
+            <b class="text-red">I</b>
+            <b class="text-orange">P</b>
+            <b class="text-purple">E</b>
             <b class="text-blue">D</b>
-            <b class="text-red">A</b>
-            <b class="text-orange">S</b>
-            <b class="text-blue">A</b>
-            <b class="text-green">R</b>
+            <b class="text-green">A</b>
+            <b class="text-yellow">T</b> -->
         </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
             <span class="icon-bar"></span>
