@@ -18,7 +18,7 @@ class Login extends BaseController
 
         helper(['form']);
         $data = [
-            'judul' => 'Login || SIPEDAT'
+            'judul' => 'Login || SIMPELDAT'
         ];
         return view('backend/vLogin', $data);
     }
@@ -83,7 +83,7 @@ class Login extends BaseController
 
         session();
         $data = [
-            'judul' => 'Reset Password || SIPEDAT',
+            'judul' => 'Reset Password || SIMPELDAT',
             'validation' => \Config\Services::validation()
         ];
         return view('backend/vResetPassword', $data);

@@ -13,13 +13,13 @@
 		<!-- begin #home -->
 		<div id="home" class="content has-bg home">
 			<!-- begin content-bg -->
-			<div class="content-bg" style="background-image: url(<?= base_url() ?>/docs/frontend/assets/img/bg/bg-home.jpg);" 
+			<div class="content-bg" style="background-image: url(<?= base_url() ?>/docs/frontend/assets/img/bg/bg-home3.jpg);" 
 				>
 			</div>
 			<!-- end content-bg -->
 			<!-- begin container -->
 			<div class="container home-content">
-				<h1>Selamat Datang Di Sistem Pengelolaan Smartapps Dan E-Complaint</h1>
+				<h1>Selamat Datang Di Sistem Pengelolaan Data Smartapps Dan E-Complaint</h1>
 				<!-- <p>
 					We have created a multi-purpose theme that take the form of One-Page or Multi-Page Version.<br />
 					Use our <a href="#">theme panel</a> to select your favorite theme color.
@@ -41,6 +41,10 @@
 		<!-- begin #kontak -->
 		<?= $this->include("frontend/vKontak"); ?>
 		<!-- end #kontak -->
+
+		<!-- begin #footer -->
+		<?= $this->include("frontend/template/footer"); ?>
+		<!-- end #footer -->
 	</div>
 	<!-- end #page-container -->
 	

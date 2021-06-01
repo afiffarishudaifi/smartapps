@@ -1,6 +1,6 @@
 
 		<div id="keunggulan" class="content has-bg" data-scrollview="true">
-			<div class="content-bg" style="background-image: url(<?= base_url() ?>/docs/frontend/assets/img/bg/bg-quote.jpg)"
+			<div class="content-bg" style="background-image: url(<?= base_url() ?>/docs/frontend/assets/img/bg/bg-quote2.jpg)"
 				data-paroller-factor="0.5"
 				data-paroller-factor-md="0.01"
 				data-paroller-factor-xs="0.01">

@@ -8,7 +8,7 @@
 						<img src="<?= base_url()?>/docs/admin/assets/img/foto_logo/logo.png">
 					</span>
 					<span class="brand-text">
-						<span class="">Simpel</span> Dasar
+						<span class="">Simpeldat</span>
 					</span>
 				</a>
 				<!-- end navbar-brand -->

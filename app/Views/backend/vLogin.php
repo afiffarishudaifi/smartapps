@@ -49,13 +49,13 @@
                     <div class="brand">
                         <span class="logo">
                         </span> <b>Login 
-                                <b class="text-blue">S</b>
+                                <b class="text-dark">SIMPELDAT</b><!-- 
                                 <b class="text-red">I</b>
                                 <b class="text-orange">P</b>
                                 <b class="text-purple">E</b>
                                 <b class="text-blue">D</b>
                                 <b class="text-green">A</b>
-                                <b class="text-yellow">T</b></b>
+                                <b class="text-yellow">T</b> --></b>
                         <small>Penerima Pengaduan Masyarakat</small>
                     </div>
                     <div class="icon">
