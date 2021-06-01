@@ -12,130 +12,107 @@ class Model_dashboard_user extends Model
     public function pengaduan($param)
     {
         $link = 'http://localhost/api_smartapps/User/';
+        $curl = \Config\Services::curlrequest();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
+        $result = $curl->request("GET", $link . "Dashboard", [
+            'query' => $param,
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $response = $client->request('GET', $link . 'Dashboard', [
-            'query' => $param
-        ])->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function jumlah_pengajuan_pengaduan($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/jumlah_pengajuan_pengaduan/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/jumlah_pengajuan_pengaduan/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function jumlah_penanganan($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/jumlah_penanganan/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/jumlah_penanganan/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function total_pengaduan_terkonfirmasi($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/total_pengaduan_terkonfirmasi/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_terkonfirmasi/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil['ID_PENGADUAN'];
     }
 
     public function total_pengaduan_penanganan($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/total_pengaduan_penanganan/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_penanganan/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil['ID_PENGADUAN'];
     }
 
     public function total_pengaduan_selesai($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/total_pengaduan_selesai/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_selesai/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil['ID_PENGADUAN'];
     }
 
     public function view_detail_pengaduan($param, $id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Dashboard/view_detail_pengaduan/' . $param .'/'.$id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+
+        $result = $curl->request("GET", $link . "Dashboard/view_detail_pengaduan/" . $param . '/' . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ],
+            "query" => $param
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
-    }
-
-    public function insert_token($data_token) 
-    {
-        $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('POST', $link . 'Dashboard/insert_token', [
-            'form_params' => $data_token
-        ]);
-        return $response;
-    }
-
-    public function saveToken($data)
-    {
-        $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('POST', $link . 'Token/create', [
-            'form_params' => $data
-        ]);
-        return $response;
-    }
-
-    public function search_token($param)
-    {
-        $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Token/show/' . $param)->getBody()->getContents();
-        $hasil = json_decode($response, true);
-        return $hasil;
-    }
-
-    public function updateToken($id, $data)
-    {
-        $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('PUT', $link . 'Token/update/' . $id, [
-            'form_params' => $data
-        ]);
-        return $response;
     }
 }

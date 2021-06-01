@@ -14,33 +14,42 @@ class Model_login extends Model
     public function get_login($username)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Login/get_login/' . $username)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "Login/get_login/" . $username, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function get_login_admin($username)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Login/get_login_admin/' . $username)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "Login/get_login_admin/" . $username, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function cek_user($emai, $username)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Login/cek_user/' . $username . '/' . $emai)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "Login/cek_user/" . $username . '/' . $emai, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 

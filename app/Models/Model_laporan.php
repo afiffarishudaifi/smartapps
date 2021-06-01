@@ -16,34 +16,44 @@ class Model_laporan extends Model
     public function view_data($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/index_view/' . $id)->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_view/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_kategori($id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/data_kategori/' . $id)->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/data_kategori/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_filter($param, $id)
     {
         $link = 'http://localhost/api_smartapps/User/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_filter/" . $id, [
+            'query' => $param,
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $response = $client->request('GET', $link . 'M_laporan/index_filter/' . $id, [
-            'query' => $param
-        ])->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
 }

@@ -13,67 +13,87 @@ class Model_laporan_admin extends Model
     public function view_data()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/index_view')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_view", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_kategori()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/data_kategori')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/data_kategori", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_filter($param)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_filter", [
+            'query' => $param,
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $response = $client->request('GET', $link . 'M_laporan/index_filter' , [
-            'query' => $param
-        ])->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_tempat()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/index_view_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_view_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_kategori_tempat()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_laporan/data_kategori_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/data_kategori_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function view_data_filter_tempat($param)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_laporan/index_filter_tempat", [
+            'query' => $param,
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $response = $client->request('GET', $link . 'M_laporan/index_filter_tempat' , [
-            'query' => $param
-        ])->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
 }

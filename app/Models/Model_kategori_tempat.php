@@ -15,21 +15,22 @@ class Model_kategori_tempat extends Model
     public function view_data()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_kategori_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "M_kategori_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function add_data($data)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('POST', $link . 'M_kategori_tempat/create', [
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('POST', $link . 'M_kategori_tempat/create', [
             'form_params' => $data
         ]);
         return $response;
@@ -38,23 +39,23 @@ class Model_kategori_tempat extends Model
     public function detail_data($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_kategori_tempat/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . 'M_kategori_tempat/show/' . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil[0];
     }
 
     public function update_data($data, $id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('PUT', $link . 'M_kategori_tempat/update' . '/' . $id, [
-            'form_params' => $data,
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('PUT', $link . 'M_kategori_tempat/update/' . $id, [
+            'form_params' => $data
         ]);
         return $response;
     }
@@ -62,21 +63,16 @@ class Model_kategori_tempat extends Model
     public function delete_data($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('DELETE', 'M_kategori_tempat/delete/' . $id)->getBody();
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('DELETE', $link . 'M_kategori_tempat/delete/' . $id)->getBody();
         return json_decode($response, true);
     }
 
     public function cek_foreign($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_kategori_tempat/cek_foreign/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
-        return $hasil;
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('GET', $link . 'M_kategori_tempat/cek_foreign/' . $id)->getBody();
+        return json_decode($response, true);
     }
 }

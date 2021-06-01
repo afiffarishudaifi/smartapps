@@ -15,21 +15,22 @@ class Model_komentar extends Model
     public function view_data()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_komentar')->getBody()->getContents();
-        return json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_komentar", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function add_data($data)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('POST', $link . 'M_komentar/create', [
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('POST', $link . 'M_komentar/create', [
             'form_params' => $data
         ]);
         return $response;
@@ -38,22 +39,22 @@ class Model_komentar extends Model
     public function detail_data($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_komentar/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . 'M_komentar/show/' . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function update_data($data, $id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-
-        $response = $client->request('PUT', $link . 'M_komentar/update/' . $id, [
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('PUT', $link . 'M_komentar/update/' . $id, [
             'form_params' => $data
         ]);
         return $response;
@@ -62,10 +63,8 @@ class Model_komentar extends Model
     public function delete_data($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('DELETE', 'M_komentar/delete/' . $id)->getBody();
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('DELETE', $link . 'M_komentar/delete/' . $id)->getBody();
         return json_decode($response, true);
     }
 
@@ -76,22 +75,28 @@ class Model_komentar extends Model
     public function view_data_apps()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_komentar/view_data_apps')->getBody();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_komentar/view_data_apps", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function detail_data_dropdown($id)
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_komentar/detail_data_dropdown' . '/' . $id)->getBody();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_komentar/detail_data_dropdown/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
     // ======= WEB ======= //
@@ -101,11 +106,14 @@ class Model_komentar extends Model
     public function view_data_tempat()
     {
         $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_komentar/view_data_tempat')->getBody();
-        $hasil = json_decode($response, true);
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_komentar/view_data_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
     // ======= WEB ======= //

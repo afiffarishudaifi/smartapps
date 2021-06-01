@@ -86,6 +86,18 @@ class Dashboard extends BaseController
         return view('backend/vDashboard', $data);
     }
 
+    public function coba()
+    {
+        $model = new Model_dashboard();
+        $result = $model->coba();
+        $jumlah_pengajuan_tempat = $model->jumlah_pengajuan_tempat();
+        echo json_encode($result);
+        // $curl = service('curlrequest');
+
+        // echo "<pre>";
+        // print_r($result);
+    }
+
     public function jumlah_pengajuan()
     {
         $model = new Model_dashboard();
@@ -145,23 +157,23 @@ class Dashboard extends BaseController
         return view('backend/vDetailTempat', $data);
     }
 
-    public function saveToken($token)
-    {
-        $session = session();
-        $model = new Model_dashboard();
-        $id = $session->get('id_login');
-        $data = [
-            'TOKEN' => $token,
-            'ID_USER' => $id
-        ];
-        $data_token = $model->search_token($id);
-        if($data_token) {
-            $data = [
-                'TOKEN' => $token
-            ];            
-            $saveToken = $model->updateToken($id, $data);
-        } else {
-            $saveToken = $model->saveToken($data);
-        }
-    }
+    // public function saveToken($token)
+    // {
+    //     $session = session();
+    //     $model = new Model_dashboard();
+    //     $id = $session->get('id_login');
+    //     $data = [
+    //         'TOKEN' => $token,
+    //         'ID_USER' => $id
+    //     ];
+    //     $data_token = $model->search_token($id);
+    //     if($data_token) {
+    //         $data = [
+    //             'TOKEN' => $token
+    //         ];            
+    //         $saveToken = $model->updateToken($id, $data);
+    //     } else {
+    //         $saveToken = $model->saveToken($data);
+    //     }
+    // }
 }
