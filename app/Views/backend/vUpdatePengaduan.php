@@ -155,22 +155,32 @@
                                         <option value="Terkonfirmasi">Laporan Terkonfirmasi</option>
                                         <option value="Penanganan">Dalam Penanganan</option>
                                         <option value="Selesai">Selesai</option>
+                                        <option value="Ditolak">Ditolak</option>
                                     <?php } else if($pengaduan['STATUS_PENGADUAN'] == 'Terkonfirmasi') {?>
                                         <option value="Pengajuan">Pengajuan</option>
                                         <option value="Terkonfirmasi" selected="">Laporan Terkonfirmasi</option>
                                         <option value="Penanganan">Dalam Penanganan</option>
                                         <option value="Selesai">Selesai</option>
+                                        <option value="Ditolak">Ditolak</option>
                                     <?php } else if($pengaduan['STATUS_PENGADUAN'] == 'Penanganan') {?>
                                         <option value="Pengajuan">Pengajuan</option>
                                         <option value="Terkonfirmasi">Laporan Terkonfirmasi</option>
                                         <option value="Penanganan" selected="">Dalam Penanganan</option>
                                         <option value="Selesai">Selesai</option>
+                                        <option value="Ditolak">Ditolak</option>
                                     <?php } else if($pengaduan['STATUS_PENGADUAN'] == 'Selesai') {?>
                                         <option value="Pengajuan">Pengajuan</option>
                                         <option value="Terkonfirmasi">Laporan Terkonfirmasi</option>
                                         <option value="Penanganan">Dalam Penanganan</option>
                                         <option value="Selesai" selected="">Selesai</option>
-                                    <?php }?>
+                                        <option value="Ditolak">Ditolak</option>
+                                    <?php } else { ?>
+                                        <option value="Pengajuan">Pengajuan</option>
+                                        <option value="Terkonfirmasi">Laporan Terkonfirmasi</option>
+                                        <option value="Penanganan">Dalam Penanganan</option>
+                                        <option value="Selesai">Selesai</option>
+                                        <option value="Ditolak" selected="">Ditolak</option>
+                                    <?php } ?>
                                 </select>
                             </div>
                         </div>

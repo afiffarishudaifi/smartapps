@@ -14,35 +14,46 @@ class Model_admin extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_pengaturan/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_pengaturan/show/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil['admin'];
     }
 
     public function detail_data_password($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_pengaturan/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_pengaturan/show/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function update_data($data, $id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
 
         if ($data['file'] == '') {
-            $response = $client->request('POST', $link . 'M_pengaturan/update_data' . '/' . $id, [
+            // $response = $client->request('POST', $link . 'M_pengaturan/update_data' . '/' . $id, [
+            //     'form_params' => $data
+            // ]);
+            // return $response;
+            $curl = \Config\Services::curlrequest();
+            $response = $curl->request('POST', $link . 'M_pengaturan/update_data/' . $id, [
                 'form_params' => $data
             ]);
             return $response;

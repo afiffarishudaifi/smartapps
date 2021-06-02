@@ -77,7 +77,7 @@
                                         <td>
                                             <center>
                                                 <img class="img-rounded" style="width: 60px; height: 80px;"
-                                                    src="<?= 'http://localhost/api_smartapps/' . $item['FOTO_PENGADUAN']; ?>">
+                                                    src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $item['FOTO_PENGADUAN']; ?>">
                                             </center>
                                         </td>
                                         <td><?= $item['STATUS_PENGADUAN']; ?></td>
@@ -85,12 +85,12 @@
                                             <center>
                                                 <?php if ($item['STATUS_PENGADUAN'] != 'Penanganan') { ?>
                                                 <a href="" type="button"
-                                                    onclick="validasi_penanganan(<?= $item['ID_PENGADUAN']; ?>)"
+                                                    onclick="validasi_penanganan(<?= $item['ID_PENGADUAN']; ?>,<?= $item['ID_PENGGUNA_APPS']; ?>)"
                                                     class="btn btn-success" data-toggle="modal"
                                                     data-target="#validasiModal">Penanganan</a>
                                                 <?php } else { ?>
                                                 <a href="" type="button"
-                                                    onclick="validasi_selesai(<?= $item['ID_PENGADUAN']; ?>)"
+                                                    onclick="validasi_selesai(<?= $item['ID_PENGADUAN']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)"
                                                     class="btn btn-dark" data-toggle="modal"
                                                     data-target="#validasiModalSelesai">Selesai</a>
                                                 <?php } ?>
@@ -129,6 +129,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_pengaduan" class="id_pengaduan">
+                            <input type="hidden" name="id_pengguna_apps" class="id_pengguna_apps">
                             <input type="hidden" name="status_pengaduan" class="status_pengaduan" value="Penanganan">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Tangani</button>
@@ -158,6 +159,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_pengaduan" class="id_pengaduan">
+                            <input type="hidden" name="id_pengguna_apps" class="id_pengguna_apps">
                             <input type="hidden" name="status_pengaduan" class="status_pengaduan" value="Selesai">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Selesai</button>
@@ -177,16 +179,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-    function validasi_penanganan(id) {
+    function validasi_penanganan(id, apps) {
         // Set data to Form Edit
         $('.id_pengaduan').val(id);
+        $('.id_pengguna_apps').val(apps);
         // Call Modal Edit
         $('#validasiModal').modal('show');
     };
 
-    function validasi_selesai(id) {
+    function validasi_selesai(id, apps) {
         // Set data to Form Edit
         $('.id_pengaduan').val(id);
+        $('.id_pengguna_apps').val(apps);
         // Call Modal Edit
         $('#validasiModalSelesai').modal('show');
     };

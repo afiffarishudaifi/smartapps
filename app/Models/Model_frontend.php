@@ -11,45 +11,57 @@ class Model_frontend extends Model
 
     public function view_data_tempat()
     {
-        $link = 'http://localhost/api_smartapps/Frontend/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "Frontend/view_data_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Frontend/view_data_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function detail_data_tempat($id)
     {
-        $link = 'http://localhost/api_smartapps/Frontend/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Frontend/detail_data_tempat/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "Frontend/detail_data_tempat/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function view_data_pengaduan()
     {
-        $link = 'http://localhost/api_smartapps/Frontend/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "Frontend/view_data_pengaduan", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Frontend/view_data_pengaduan')->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function detail_data_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/Frontend/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'Frontend/detail_data_pengaduan/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "Frontend/detail_data_pengaduan/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 }

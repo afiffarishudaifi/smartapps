@@ -82,7 +82,7 @@
                                             <center>
                                                 <a href="<?php base_url() ?>M_foto_tempat/view/<?php echo $item['ID_TEMPAT']; ?>" class="btn btn-circle btn-edit btn-aqua"><i
                                                 class="fas fa-file-image"></i></a>
-                                                <a href="" type="button" onclick="validasi(<?= $item['ID_TEMPAT']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)" class="btn btn-circle btn-success" data-toggle="modal" data-target="#validasieModal"><i class="fa fa-check"></i></a>
+                                                <a href="" type="button" onclick="validasi(<?= $item['ID_TEMPAT']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)" class="btn btn-circle btn-success" data-toggle="modal" data-target="#validasiModal"><i class="fa fa-check"></i></a>
                                                 <a href="" type="button"
                                                     onclick="validasi_hapus(<?= $item['ID_TEMPAT']; ?>, <?= $item['ID_PENGGUNA_APPS']; ?>)"
                                                     class="btn btn-circle btn-danger"
@@ -106,7 +106,7 @@
 
         <!-- Modal Validasi Class-->
         <form action="<?php echo base_url('Dashboard/M_validasi_tempat/validasi_tempat'); ?>" method="post">
-            <div class="modal fade" id="validasieModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="validasiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">

@@ -81,7 +81,8 @@ class M_validasi_pengaduan extends BaseController
         $model = new Model_validasi();
         $data = array(
             'status_pengaduan'    => $this->request->getVar('status_pengaduan'),
-            'id_web'    => $this->request->getVar('id_web')
+            'id_web'    => $this->request->getVar('id_web'),
+            'id_pengaduan' => $id
         );
         
         $model->update_data_pengaduan($data, $id);

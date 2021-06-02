@@ -80,7 +80,7 @@
                                         <td width="1%"><?= $no++; ?></td>
                                         <td>
                                             <center>
-                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://localhost/api_smartapps/' . $item['NAMA_FOTO']; ?>">
+                                                <img class="img-rounded" style="width: 30px; height: 40px;" src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $item['NAMA_FOTO']; ?>">
                                             </center>
                                         </td>
                                         <td>

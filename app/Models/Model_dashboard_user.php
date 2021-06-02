@@ -11,7 +11,7 @@ class Model_dashboard_user extends Model
 
     public function pengaduan($param)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard", [
@@ -27,7 +27,7 @@ class Model_dashboard_user extends Model
 
     public function jumlah_pengajuan_pengaduan($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/jumlah_pengajuan_pengaduan/" . $id, [
@@ -42,7 +42,7 @@ class Model_dashboard_user extends Model
 
     public function jumlah_penanganan($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/jumlah_penanganan/" . $id, [
@@ -57,7 +57,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_terkonfirmasi($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_terkonfirmasi/" . $id, [
@@ -72,7 +72,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_penanganan($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_penanganan/" . $id, [
@@ -87,7 +87,7 @@ class Model_dashboard_user extends Model
 
     public function total_pengaduan_selesai($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/total_pengaduan_selesai/" . $id, [
@@ -102,7 +102,7 @@ class Model_dashboard_user extends Model
 
     public function view_detail_pengaduan($param, $id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
 
         $result = $curl->request("GET", $link . "Dashboard/view_detail_pengaduan/" . $param . '/' . $id, [

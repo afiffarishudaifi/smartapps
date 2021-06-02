@@ -13,70 +13,83 @@ class Model_tempat extends Model
 
     public function view_tempat()
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . 'M_tempat/show/' . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function add_data($data)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        // $client = new Client([
+        //     'base_uri' => $link,
+        // ]);
 
-        $response = $client->request('POST', $link . 'M_tempat/create', [
-           'multipart' => [
-                [
-                    'name'     => 'id_pengguna_apps',
-                    'contents' => $data['id_pengguna_apps']
-                ],[
-                    'name'     => 'id_kategori_tempat',
-                    'contents' => $data['id_kategori_tempat']
-                ],[
-                    'name'     => 'nama_tempat',
-                    'contents' => $data['nama_tempat']
-                ],[
-                    'name'     => 'long_tempat',
-                    'contents' => $data['long_tempat']
-                ],[
-                    'name'     => 'lat_tempat',
-                    'contents' => $data['lat_tempat']
-                ],[
-                    'name'     => 'alamat_tempat',
-                    'contents' => $data['alamat_tempat']
-                ],[
-                    'name'     => 'deskripsi_tempat',
-                    'contents' => $data['deskripsi_tempat']
-                ],[
-                    'name'     => 'no_telp_tempat',
-                    'contents' => $data['no_telp_tempat']
-                ],[
-                    'name'     => 'status_tempat',
-                    'contents' => $data['status_tempat']
-                ]
-            ]
+        // $response = $client->request('POST', $link . 'M_tempat/create', [
+        //    'multipart' => [
+        //         [
+        //             'name'     => 'id_pengguna_apps',
+        //             'contents' => $data['id_pengguna_apps']
+        //         ],[
+        //             'name'     => 'id_kategori_tempat',
+        //             'contents' => $data['id_kategori_tempat']
+        //         ],[
+        //             'name'     => 'nama_tempat',
+        //             'contents' => $data['nama_tempat']
+        //         ],[
+        //             'name'     => 'long_tempat',
+        //             'contents' => $data['long_tempat']
+        //         ],[
+        //             'name'     => 'lat_tempat',
+        //             'contents' => $data['lat_tempat']
+        //         ],[
+        //             'name'     => 'alamat_tempat',
+        //             'contents' => $data['alamat_tempat']
+        //         ],[
+        //             'name'     => 'deskripsi_tempat',
+        //             'contents' => $data['deskripsi_tempat']
+        //         ],[
+        //             'name'     => 'no_telp_tempat',
+        //             'contents' => $data['no_telp_tempat']
+        //         ],[
+        //             'name'     => 'status_tempat',
+        //             'contents' => $data['status_tempat']
+        //         ]
+        //     ]
+        // ]);
+        // return $response;
+        // dd($data);
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('POST', $link . 'M_tempat/create', [
+            'form_params' => $data
         ]);
         return $response;
     }
 
     public function add_data_foto($data)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -100,84 +113,97 @@ class Model_tempat extends Model
 
     public function data_pengguna_apps()
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat/data_pengguna_apps", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/data_pengguna_apps')->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function data_kategori_tempat()
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat/data_kategori_tempat", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/data_kategori_tempat')->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function data_max_id()
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat/data_max_id", [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/data_max_id')->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function update_data($data, $id)
     {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('t_tempat');
-        $builder->where('ID_TEMPAT', $id);
-        $builder->set($data);
-        return $builder->update();
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('PUT', $link . 'M_tempat/update/' . $id, [
+            'form_params' => $data
+        ]);
+        return $response;
     }
 
     public function delete_data($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('DELETE', 'M_tempat/delete/' . $id)->getBody();
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('DELETE', $link . 'M_tempat/delete/' . $id)->getBody();
         return json_decode($response, true);
     }
 
     public function delete_foto_tempat($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('DELETE', 'M_tempat/delete_foto_tempat/' . $id)->getBody();
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('DELETE', $link . 'M_tempat/delete_foto_tempat/' . $id)->getBody();
         return json_decode($response, true);
     }
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/data_edit_dropwdown/' . $id)->getBody()->getContents();
-        return json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat/data_edit_dropwdown/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function detail_data_foto($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_tempat/detail_data_foto/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("GET", $link . "M_tempat/detail_data_foto/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 }

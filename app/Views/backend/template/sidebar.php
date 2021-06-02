@@ -13,7 +13,7 @@ $session = session();
                     <div class="image">
                         <center>
                             <img
-                                src="<?= 'http://localhost/api_smartapps/' . $session->get('foto_login'); ?>" />
+                                src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $session->get('foto_login'); ?>" />
                         </center>
                     </div>
                     <div class="info">

@@ -13,7 +13,7 @@ class Model_login extends Model
 
     public function get_login($username)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "Login/get_login/" . $username, [
             "headers" => [
@@ -27,7 +27,7 @@ class Model_login extends Model
 
     public function get_login_admin($username)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "Login/get_login_admin/" . $username, [
             "headers" => [
@@ -41,7 +41,7 @@ class Model_login extends Model
 
     public function cek_user($emai, $username)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "Login/cek_user/" . $username . '/' . $emai, [
             "headers" => [
@@ -55,11 +55,9 @@ class Model_login extends Model
 
     public function reset_password($id, $data)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('POST', $link . 'Login/update_data/' . $id, [
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('POST', $link . 'Login/update_data/' . $id, [
             'form_params' => $data
         ]);
         return $response;

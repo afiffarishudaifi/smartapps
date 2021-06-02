@@ -15,7 +15,7 @@ class Model_laporan extends Model
 
     public function view_data($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_view/" . $id, [
             "headers" => [
@@ -29,7 +29,7 @@ class Model_laporan extends Model
 
     public function view_data_kategori($id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/data_kategori/" . $id, [
             "headers" => [
@@ -43,7 +43,7 @@ class Model_laporan extends Model
 
     public function view_data_filter($param, $id)
     {
-        $link = 'http://localhost/api_smartapps/User/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_filter/" . $id, [
             'query' => $param,

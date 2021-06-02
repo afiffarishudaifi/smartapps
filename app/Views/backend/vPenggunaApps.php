@@ -89,7 +89,7 @@
                                         <td><?= $item['NO_HP_PENGGUNA_APPS']; ?></td>
                                         <td>
                                             <center>
-                                                <img class="img-rounded" style="width: 60px; height: 80px;" src="<?= 'http://localhost/api_smartapps/' . $item['FOTO_PENGGUNA_APPS']; ?>">
+                                                <img class="img-rounded" style="width: 60px; height: 80px;" src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $item['FOTO_PENGGUNA_APPS']; ?>">
                                             </center>
                                         <td>
                                             <center>

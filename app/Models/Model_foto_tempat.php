@@ -14,19 +14,22 @@ class Model_foto_tempat extends Model
 
     public function view_foto_tempat($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . "M_foto_tempat/view/" . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
 
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_foto_tempat/view/' . $id)->getBody()->getContents();
-        return json_decode($response, true);
+        $hasil = json_decode($result, true);
+        return $hasil;
     }
 
     public function add_data($data)
     {
 
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -51,18 +54,21 @@ class Model_foto_tempat extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('GET', 'M_foto_tempat/show/' . $id)->getBody()->getContents();
-        $hasil = json_decode($response, true);
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $result = $curl->request("get", $link . 'M_foto_tempat/show/' . $id, [
+            "headers" => [
+                "Accept" => "application/json"
+            ]
+        ])->getbody();
+
+        $hasil = json_decode($result, true);
         return $hasil;
     }
 
     public function update_data($data, $id)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -90,11 +96,9 @@ class Model_foto_tempat extends Model
 
     public function delete_data($id, $id_tempat)
     {
-        $link = 'http://localhost/api_smartapps/Admin/';
-        $client = new Client([
-            'base_uri' => $link,
-        ]);
-        $response = $client->request('DELETE', 'M_foto_tempat/delete_data/' . $id . '/' . $id_tempat)->getBody();
+        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $curl = \Config\Services::curlrequest();
+        $response = $curl->request('DELETE', $link . 'M_foto_tempat/delete_data/' . $id)->getBody();
         return json_decode($response, true);
     }
 }

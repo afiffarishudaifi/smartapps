@@ -169,7 +169,7 @@
                             <div class="col-md-9 col-sm-9">
                                 <center>
                                     <img class="img-rounded" style="width: 15%; height: 20%;" align="left"
-                                        src="<?= 'http://localhost/api_smartapps/' . $web['FOTO_WEB']; ?>">
+                                        src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $web['FOTO_WEB']; ?>">
                                 </center>
                             </div>
                         </div>

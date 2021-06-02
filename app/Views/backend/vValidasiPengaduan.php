@@ -84,7 +84,7 @@
                                         <td>
                                             <center>
                                                 <img class="img-rounded" style="width: 60px; height: 80px;"
-                                                    src="<?= 'http://localhost/api_smartapps/' . $item['FOTO_PENGADUAN']; ?>">
+                                                    src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $item['FOTO_PENGADUAN']; ?>">
                                             </center>
                                         </td>
                                         <td><?= $item['STATUS_PENGADUAN']; ?></td>
@@ -96,7 +96,7 @@
                                                     data-toggle="modal" data-target="#validasiModal"><i
                                                         class="fa fa-check"></i></a>
                                                 <a href="" type="button"
-                                                    onclick="validasi(<?= $item['ID_PENGADUAN']; ?>, <?= $item['ID_WEB']; ?>)"
+                                                    onclick="validasi_hapus(<?= $item['ID_PENGADUAN']; ?>, <?= $item['ID_WEB']; ?>)"
                                                     class="btn btn-circle btn-danger"
                                                     data-toggle="modal" data-target="#validasieHapus"><i
                                                         class="fa fa-ban"></i></a>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id_pengaduan" class="id_pengaduan">
-                            <input type="text" name="id_web" class="id_web">
+                            <input type="hidden" name="id_web" class="id_web">
                             <input type="hidden" name="status_pengaduan" class="status_pengaduan" value="Ditolak">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Hapus</button>

@@ -51,7 +51,8 @@ class M_validasi_tempat extends BaseController
         $id = $this->request->getVar('id_tempat');
         $data = array(
             'status_tempat'   => $this->request->getVar('status_tempat'),
-            'id_pengguna_apps'    => $this->request->getVar('id_pengguna_apps')
+            'id_pengguna_apps'    => $this->request->getVar('id_pengguna_apps'),
+            'id_tempat' => $id
         );
 
         $model = new Model_validasi();

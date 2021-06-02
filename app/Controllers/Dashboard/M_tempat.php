@@ -173,7 +173,8 @@ class M_tempat extends BaseController
                 'alamat_tempat'   => $this->request->getVar('alamat_tempat'),
                 'deskripsi_tempat'   => $this->request->getVar('deskripsi_tempat'),
                 'no_telp_tempat'   => $this->request->getVar('no_telp_tempat'),
-                'status_tempat'   => $this->request->getVar('status_tempat')
+                'status_tempat'   => $this->request->getVar('status_tempat'),
+                'id_tempat' => $id
             );
             $model = new Model_tempat();
             $model->update_data($data, $id);

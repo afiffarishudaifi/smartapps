@@ -87,5 +87,24 @@ class M_validasi extends BaseController
         ];
         return view('user/vValidasiPenanganan', $data);
     }
+
+    public function validasi_penanganan()
+    {
+        $session = session();
+        if (!$session->get('username_login') || $session->get('level_login') != 'User') {
+            return redirect()->to('/smartapps/Dashboard/Login');
+        }
+
+        helper(['form', 'url']);
+        $id = $this->request->getVar('id_pengaduan');
+        $model = new Model_validasi_user();
+        $data = array(
+            'status_pengaduan'    => $this->request->getVar('status_pengaduan'),
+            'id_pengguna_apps'    => $this->request->getVar('id_pengguna_apps')
+        );
+        $model->update_data_pengaduan($data, $id);
+        $session->setFlashdata('sukses', 'Data sudah berhasil divalidasi');
+        return redirect()->to(base_url('User/M_validasi/index_penanganan'));
+    }
     // end penanganan
 }

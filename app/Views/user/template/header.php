@@ -36,7 +36,7 @@
         </li>
         <li class="dropdown navbar-user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<?= 'http://localhost/api_smartapps/' . $session->get('foto_login'); ?>" alt="" />
+                <img src="<?= 'http://smartapps.tamif2021.my.id/api_smartapps/' . $session->get('foto_login'); ?>" alt="" />
                 <span class="d-none d-md-inline"><?= $session->get('nama_login'); ?></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">

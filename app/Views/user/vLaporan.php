@@ -189,7 +189,6 @@
                 ],
                 "ajax": {
                     "url": "<?= base_url() ?>/User/M_laporan/data/" + $('#tanggal').val() + '/' + $('#select_kategori').val() + '/' + $('#select_status').val(),
-                    // "url": "http://localhost/smartapps/User/M_laporan/data/15-03-2021%20-%2018-03-2021/1/Penanganan",
                     "dataSrc": ""
                 },
                 "columns": [{
