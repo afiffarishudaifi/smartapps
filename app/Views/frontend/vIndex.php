@@ -29,15 +29,15 @@
 			<!-- end container -->
 		</div>
 		<!-- end #home -->
-		
+
+		<!-- begin #pengaduan -->
+		<?= $this->include("frontend/vPengaduan"); ?>
+		<!-- end #pengaduan -->
+
 		<!-- begin #about -->
 		<?= $this->include("frontend/vAbout"); ?>
 		<!-- end #about -->
 
-		<!-- beign #kegunggulan -->
-		<?= $this->include("frontend/vKeunggulan"); ?>
-		<!-- end #keunggulan -->
-		
 		<!-- begin #kontak -->
 		<?= $this->include("frontend/vKontak"); ?>
 		<!-- end #kontak -->

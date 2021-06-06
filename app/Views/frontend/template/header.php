@@ -25,8 +25,8 @@
 						<li class="nav-item dropdown">
 							<a class="nav-link active" href="#home" data-click="scroll-to-target" data-scroll-target="#home">BERANDA</b></a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="#about" data-click="scroll-to-target">TENTANG SIMPEL DASAR</a></li>
-						<li class="nav-item"><a class="nav-link" href="#keunggulan" data-click="scroll-to-target">KEUNGGULAN</a></li>
+						<li class="nav-item"><a class="nav-link" href="#pengaduan" data-click="scroll-to-target">PENGADUAN</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about" data-click="scroll-to-target">TENTANG</a></li>
 						<li class="nav-item"><a class="nav-link" href="#contact" data-click="scroll-to-target">KONTAK</a></li>
 						<li class="nav-item"><a class="nav-link" href="<?= base_url()?>/Dashboard/Login">LOGIN</a></li>
 					</ul>

@@ -5,21 +5,18 @@
 				<h2 class="content-title"> Kontak</h2>
 				<p class="content-desc">
 						Jika kamu memiliki sebuah pertanyaan, saran dan semua hal yang ingin disampaikan kepada pengembang<br \> aplikasi
-						"Simpel Dasar", bisa kirim pesan melalui form dibawah ini.
+						"Simpeldat", bisa kirim pesan melalui form dibawah ini.
 				</p>
 				<!-- begin row -->
 				<div class="row">
 					<!-- begin col-6 -->
 					<div class="col-lg-6" data-animation="true" data-animation-type="fadeInLeft">
 						
-							<h3>Jika anda ingin berdiskusi dapat menghubungi kami.</h3>
+							<h3>Jika anda ingin mendaftarkan dan mendapatkan fitur penerima pengaduan dari masyarakat, dapat menghubungi kami.</h3>
 							<p>
 								<strong>Afif Faris Hudaifi</strong><br />
 								Jember, Jawa Timur, Indonesia<br />
 								089697020078<br />
-							</p>
-							<p>
-								<span class="phone">+11 (0) 123 456 78</span><br />
 								<a href="https://afiffaris5@gmail.com" class="text-primary">afiffaris5@gmail.com</a>
 							</p>
 					</div>
