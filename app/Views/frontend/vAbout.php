@@ -32,7 +32,7 @@
 				<!-- end row -->
 
 
-				<center><h2 class="content">Keunggulan Sistem Pengelolaan Pengaduan</h2>
+				<center><h2 class="content">Keunggulan Sistem</h2>
 				</center>
 				<!-- begin row -->
 				<div class="row">
@@ -41,7 +41,7 @@
 						<div class="service">
 							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-check"></i></div>
 							<div class="info">
-								<h4 class="title">Mudah Dalam Menyampaikan Pengaduan</h4>
+								<h4 class="title">Mudah dalam menangani pengaduan</h4>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 						<div class="service">
 							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-user"></i></div>
 							<div class="info">
-								<h4 class="title">Cepat Ditangani Oleh Pihak Terkait</h4>
+								<h4 class="title">Cepat ditangani oleh pihak penerima pengaduan</h4>
 							</div>
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 						<div class="service">
 							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-file"></i></div>
 							<div class="info">
-								<h4 class="title">Penyimpanan Pengaduan Aman</h4>
+								<h4 class="title">Penyimpanan pengaduan aman</h4>
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 						<div class="service">
 							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-map-pin"></i></div>
 							<div class="info">
-								<h4 class="title">Penyedia Layanan Informasi dari Berbagai Tempat</h4>
+								<h4 class="title">Penyedia layanan informasi dari berbagai tempat</h4>
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 						<div class="service">
 							<div class="icon" data-animation="true" data-animation-type="bounceIn"><i class="fa fa-plus"></i></div>
 							<div class="info">
-								<h4 class="title">Dapat Menambah Tempat Baru Dengan Mudah dan Cepat</h4>
+								<h4 class="title">Dapat menambah tempat baru fengan mudah dan cepat</h4>
 							</div>
 						</div>
 					</div>

@@ -16,20 +16,11 @@ class Pengaduan extends BaseController
 
     public function index()
     {
-        // $model = new Model_list_pengaduan();
-        // $pengaduan = $model->view_data();
-
         $data = [
             'judul' => 'Pengaduan | Riwayat Pengaduan Masyarakat',
-            // 'pengaduan' => $pengaduan
             'pengaduan' => $this->Model_list_pengaduan->paginate(1, 't_pengaduan'),
             'pager' => $this->Model_list_pengaduan->pager
         ];
         return view('frontend/vListPengaduan', $data);
-    }
-
-    public function detail_pengaduan($id)
-    {
-
     }
 }
