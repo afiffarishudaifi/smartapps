@@ -143,7 +143,7 @@
                             <p><?= $total_pengaduan_ditolak; ?></p>
                         </div>
                         <div class="stats-link">
-                            <a href="<?= base_url()?>/Dashboard/M_pengaduan/detail_pengaduan/Ditolak">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+                            <a href="<?= base_url()?>/Dashboard/Dashboard/detail_pengaduan/Ditolak">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
                         </div>
                     </div>
                 </div>

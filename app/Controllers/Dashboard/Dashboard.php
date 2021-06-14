@@ -86,18 +86,6 @@ class Dashboard extends BaseController
         return view('backend/vDashboard', $data);
     }
 
-    public function coba()
-    {
-        $model = new Model_dashboard();
-        $result = $model->coba();
-        $jumlah_pengajuan_tempat = $model->jumlah_pengajuan_tempat();
-        echo json_encode($result);
-        // $curl = service('curlrequest');
-
-        // echo "<pre>";
-        // print_r($result);
-    }
-
     public function jumlah_pengajuan()
     {
         $model = new Model_dashboard();

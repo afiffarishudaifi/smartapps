@@ -108,7 +108,6 @@ class Dashboard extends BaseController
         $model = new Model_dashboard_user();
         $jumlah_pengajuan_pengaduan = $model->jumlah_pengajuan_pengaduan($id);
         $jumlah_penanganan = $model->jumlah_penanganan($id);
-        $jumlah_ditolak = $model->jumlah_ditolak($id);
     
         $model = new Model_dashboard_user();
         $pengaduan = $model->view_detail_pengaduan($param, $id);
@@ -118,8 +117,7 @@ class Dashboard extends BaseController
             'panel_title' => 'Pengaduan ' . $param,
             'pengaduan' => $pengaduan,
             'jml_pengaduan' => $jumlah_pengajuan_pengaduan,
-            'jml_penanganan' => $jumlah_penanganan,
-            'jml_ditolak' => $jumlah_ditolak
+            'jml_penanganan' => $jumlah_penanganan
         ];
         return view('user/vDetailPengaduan', $data);
     }
