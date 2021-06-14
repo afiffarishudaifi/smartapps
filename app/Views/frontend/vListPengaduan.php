@@ -58,7 +58,7 @@
 						<div class="work">
 								<h3><?= $item['JUDUL_PENGADUAN']; ?></h3>
 								<div class="post-by">
-									Posted By <a href="#">admin</a> <span class="divider">|</span> <?= $item['WAKTU_PENGADUAN']; ?>
+									Posted By admin <span class="divider">|</span> <?= $item['WAKTU_PENGADUAN']; ?>
 								</div>
 								<span class="desc-text"><?= $item['ISI_PENGADUAN']; ?></span>
 
@@ -75,21 +75,6 @@
 			<?php } ?>
 				<br><br>
 				<center>
-					<!-- <nav aria-label="...">
-					  <ul class="pagination justify-content-center">
-					    <li class="page-item disabled">
-					      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-					    </li>
-					    <li class="page-item"><a class="page-link" href="#">1</a></li>
-					    <li class="page-item active" aria-current="page">
-					      <a class="page-link" href="#">2</a>
-					    </li>
-					    <li class="page-item"><a class="page-link" href="#">3</a></li>
-					    <li class="page-item">
-					      <a class="page-link" href="#">Next</a>
-					    </li>
-					  </ul>
-					</nav> -->
 					<?= $pager->links('t_pengaduan', 'pengaduan_pagination') ?>
 				</center>
 			</div>
