@@ -11,7 +11,7 @@ var handleDashboardGritterNotification = function () {
     $.gritter.add({
       title: "Pemberitahuan",
       text: nilai,
-      image: "../assets/img/user/user-12.jpg",
+      image: "http://smartapps.tamif2021.my.id/smartapps/docs/frontend/assets/img/bg/notifikasi.jpg",
       sticky: true,
       time: "",
       class_name: "gritter-light",
