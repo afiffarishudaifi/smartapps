@@ -91,7 +91,7 @@
                         </div>
                         <hr />
                         <p class="text-center text-grey-darker mb-0">
-                            &copy; Simpel Dasar All Right Reserved 2021
+                            &copy; SIMPELDAT All Right Reserved 2021
                         </p>
                     </form>
                 </div>

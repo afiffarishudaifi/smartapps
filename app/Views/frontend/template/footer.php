@@ -6,7 +6,7 @@
 					Sistem Pengelolaan Data Smartapps
 				</div>
 				<p>
-					&copy; Copyright Afif Fari Hudaifi 2021 <br />
+					&copy; Copyright Afif Faris Hudaifi 2021 <br />
 					Download aplikasi smartapps dan AR bisa melalui :
 				</p>
 				<div class="row">

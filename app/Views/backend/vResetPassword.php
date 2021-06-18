@@ -116,7 +116,7 @@
 						</div>
 						<hr />
 						<p class="text-center mb-0">
-							&copy; Color Admin All Right Reserved 2020
+							&copy; SIMPELDAT All Right Reserved 2021
 						</p>
 					</form>
 				</div>
