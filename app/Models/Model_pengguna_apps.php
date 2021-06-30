@@ -34,40 +34,48 @@ class Model_pengguna_apps extends Model
             'base_uri' => $link,
         ]);
 
-        $response = $client->request('POST', $link . 'M_pengguna_apps/create', [
-           'multipart' => [
-                [
-                    'name'     => 'ktp',
-                    'contents' => $data['ktp']
-                ],[
-                    'name'     => 'username',
-                    'contents' => $data['username']
-                ],[
-                    'name'     => 'password',
-                    'contents' => $data['password']
-                ],[
-                    'name'     => 'nama_lengkap',
-                    'contents' => $data['nama_lengkap']
-                ],[
-                    'name'     => 'no_hp',
-                    'contents' => $data['no_hp']
-                ],[
-                    'name'     => 'alamat',
-                    'contents' => $data['alamat']
-                ],[
-                    'name'     => 'email',
-                    'contents' => $data['email']
-                ],[
-                    'name'     => 'file',
-                    'contents' => fopen($gambar, 'r'),
-                    'filename' => $data['filename']
-                ],[
-                    'name'     => 'namafile',
-                    'contents' => $data['filename']
+        if($gambar != 'docs/admin/assets/img/foto_pengguna_apps/default.png') {
+            $response = $client->request('POST', $link . 'M_pengguna_apps/create', [
+               'multipart' => [
+                    [
+                        'name'     => 'ktp',
+                        'contents' => $data['ktp']
+                    ],[
+                        'name'     => 'username',
+                        'contents' => $data['username']
+                    ],[
+                        'name'     => 'password',
+                        'contents' => $data['password']
+                    ],[
+                        'name'     => 'nama_lengkap',
+                        'contents' => $data['nama_lengkap']
+                    ],[
+                        'name'     => 'no_hp',
+                        'contents' => $data['no_hp']
+                    ],[
+                        'name'     => 'alamat',
+                        'contents' => $data['alamat']
+                    ],[
+                        'name'     => 'email',
+                        'contents' => $data['email']
+                    ],[
+                        'name'     => 'file',
+                        'contents' => fopen($gambar, 'r'),
+                        'filename' => $data['filename']
+                    ],[
+                        'name'     => 'namafile',
+                        'contents' => $data['filename']
+                    ]
                 ]
-            ]
-        ]);
-        return $response;
+            ]);
+        } else {
+            $curl = \Config\Services::curlrequest();
+            $response = $curl->request('POST', $link . 'M_pengguna_apps/create', [
+                'form_params' => $data
+            ]);
+        }
+        $hasil = json_decode($response->getbody(), true);
+        return $hasil['messages']['success'];
     }
 
     public function detail_data($id)

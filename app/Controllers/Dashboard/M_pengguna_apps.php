@@ -80,31 +80,45 @@ class M_pengguna_apps extends BaseController
             'username' => 'required|is_unique[t_pengguna_apps.USERNAME_PENGGUNA_APPS]',
             'password' => 'required',
             'email' => 'required|is_unique[t_pengguna_apps.EMAIL_PENGGUNA_APPS]|valid_email'
-            // 'file'=> 'mime_in[file,image/jpg,image/jpeg,image/png]|max_size[file,2048]'
         ])) {
             $validation = \Config\Services::validation();
             return redirect()->to(base_url('Dashboard/M_pengguna_apps/form_tambah'))->withInput()->with('validation', $validation);
         }
 
         $avatar      = $this->request->getFile('file');
-        $namabaru     = $avatar->getRandomName();
-        $avatar->move('docs/admin/assets/img/foto_pengguna_apps', $namabaru);
-        $data = array(
-            'ktp'     => $this->request->getVar('ktp'),
-            'username'    => $this->request->getVar('username'),
-            'password'    => $this->request->getVar('password'),
-            'email'   => $this->request->getVar('email'),
-            'nama_lengkap'   => $this->request->getVar('nama_lengkap'),
-            'no_hp'   => $this->request->getVar('no_hp'),
-            'alamat'   => $this->request->getVar('alamat'),
-            'file'      => $this->request->getFile('file'),
-            'filename' => "docs/admin/assets/img/foto_pengguna_apps/" . $namabaru
-        );
+        if($avatar){
+            $data = array(
+                'ktp'     => $this->request->getVar('ktp'),
+                'username'    => $this->request->getVar('username'),
+                'password'    => $this->request->getVar('password'),
+                'email'   => $this->request->getVar('email'),
+                'nama_lengkap'   => $this->request->getVar('nama_lengkap'),
+                'no_hp'   => $this->request->getVar('no_hp'),
+                'alamat'   => $this->request->getVar('alamat'),
+                'file'      => ''
+            );
+            $gambar = 'docs/admin/assets/img/foto_pengguna_apps/default.png';
+            
+        } else {
+            $namabaru     = $avatar->getRandomName();
+            $avatar->move('docs/admin/assets/img/foto_pengguna_apps', $namabaru);
+            $data = array(
+                'ktp'     => $this->request->getVar('ktp'),
+                'username'    => $this->request->getVar('username'),
+                'password'    => $this->request->getVar('password'),
+                'email'   => $this->request->getVar('email'),
+                'nama_lengkap'   => $this->request->getVar('nama_lengkap'),
+                'no_hp'   => $this->request->getVar('no_hp'),
+                'alamat'   => $this->request->getVar('alamat'),
+                'file'      => $this->request->getFile('file'),
+                'filename' => "docs/admin/assets/img/foto_pengguna_apps/" . $namabaru
+            );
+            $gambar = 'docs/admin/assets/img/foto_pengguna_apps/' . $namabaru;
+        }
 
         $model = new Model_pengguna_apps();
-        $gambar = 'docs/admin/assets/img/foto_pengguna_apps/' . $namabaru;
-        $model->add_data($data, $gambar);
-        $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
+        $respon = $model->add_data($data, $gambar);
+        $session->setFlashdata('sukses', $respon);
 
         if (file_exists($gambar)) {
             unlink($gambar);

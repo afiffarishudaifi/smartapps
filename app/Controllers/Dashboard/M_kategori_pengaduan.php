@@ -85,8 +85,8 @@ class M_kategori_pengaduan extends BaseController
             'id_web'    => $this->request->getVar('id_web')
         );
         $model = new Model_kategori_pengaduan();
-        $model->add_data($data);
-        $session->setFlashdata('sukses', 'Data sudah berhasil ditambah');
+        $respon = $model->add_data($data);
+        $session->setFlashdata('sukses', $respon);
         return redirect()->to(base_url('Dashboard/M_kategori_pengaduan'));
     }
 

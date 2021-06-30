@@ -36,7 +36,8 @@ class Model_kategori_pengaduan extends Model
         $response = $curl->request('POST', $link . 'M_kategori_pengaduan/create', [
             'form_params' => $data
         ]);
-        return $response;
+        $hasil = json_decode($response->getbody(), true);
+        return $hasil['messages']['success'];
     }
 
     public function detail_data($id)
