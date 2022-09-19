@@ -15,7 +15,7 @@ class Model_pengguna_web extends Model
 
     public function view_data()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengguna_web", [
             "headers" => [
@@ -29,7 +29,7 @@ class Model_pengguna_web extends Model
 
     public function add_data($data, $gambar)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -113,7 +113,7 @@ class Model_pengguna_web extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_pengguna_web/show/" . $id, [
             "headers" => [
@@ -127,7 +127,7 @@ class Model_pengguna_web extends Model
 
      public function detail_data_password($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_pengguna_web/show/" . $id, [
             "headers" => [
@@ -141,7 +141,7 @@ class Model_pengguna_web extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -192,7 +192,7 @@ class Model_pengguna_web extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_pengguna_web/delete/' . $id)->getBody();
         return json_decode($response, true);
@@ -200,7 +200,7 @@ class Model_pengguna_web extends Model
 
     public function cek_foreign_1($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('GET', $link . 'M_pengguna_web/cek_foreign_1/' . $id)->getBody();
         return json_decode($response, true);
@@ -208,7 +208,7 @@ class Model_pengguna_web extends Model
 
     public function cek_foreign_2($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('GET', $link . 'M_pengguna_web/cek_foreign_2/' . $id)->getBody();
         return json_decode($response, true);
@@ -216,7 +216,7 @@ class Model_pengguna_web extends Model
 
     public function delete_token($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_pengguna_web/delete_token/' . $id)->getBody();
         return json_decode($response, true);

@@ -13,7 +13,7 @@ class Model_tempat extends Model
 
     public function view_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat", [
             "headers" => [
@@ -27,7 +27,7 @@ class Model_tempat extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . 'M_tempat/show/' . $id, [
             "headers" => [
@@ -41,7 +41,7 @@ class Model_tempat extends Model
 
     public function add_data($data)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         // $client = new Client([
         //     'base_uri' => $link,
         // ]);
@@ -89,7 +89,7 @@ class Model_tempat extends Model
 
     public function add_data_foto($data)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -113,7 +113,7 @@ class Model_tempat extends Model
 
     public function data_pengguna_apps()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat/data_pengguna_apps", [
             "headers" => [
@@ -127,7 +127,7 @@ class Model_tempat extends Model
 
     public function data_kategori_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat/data_kategori_tempat", [
             "headers" => [
@@ -141,7 +141,7 @@ class Model_tempat extends Model
 
     public function data_max_id()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat/data_max_id", [
             "headers" => [
@@ -155,7 +155,7 @@ class Model_tempat extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('PUT', $link . 'M_tempat/update/' . $id, [
             'form_params' => $data
@@ -165,7 +165,7 @@ class Model_tempat extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_tempat/delete/' . $id)->getBody();
         return json_decode($response, true);
@@ -173,7 +173,7 @@ class Model_tempat extends Model
 
     public function delete_foto_tempat($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_tempat/delete_foto_tempat/' . $id)->getBody();
         return json_decode($response, true);
@@ -181,7 +181,7 @@ class Model_tempat extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat/data_edit_dropwdown/" . $id, [
             "headers" => [
@@ -195,7 +195,7 @@ class Model_tempat extends Model
 
     public function detail_data_foto($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_tempat/detail_data_foto/" . $id, [
             "headers" => [

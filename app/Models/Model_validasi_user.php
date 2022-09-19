@@ -13,7 +13,7 @@ class Model_validasi_user extends Model
 
     public function view_data_pengaduan()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/index_pengaduan", [
             "headers" => [
@@ -27,7 +27,7 @@ class Model_validasi_user extends Model
 
     public function update_data_pengaduan($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('POST', $link . 'M_validasi/update_data_pengaduan/' . $id, [
             'form_params' => $data
@@ -37,7 +37,7 @@ class Model_validasi_user extends Model
 
     public function view_data_penanganan()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/index_penanganan", [
             "headers" => [

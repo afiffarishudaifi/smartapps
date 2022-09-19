@@ -12,7 +12,7 @@ class Model_laporan_admin extends Model
 
     public function view_data()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_view", [
             "headers" => [
@@ -26,7 +26,7 @@ class Model_laporan_admin extends Model
 
     public function view_data_kategori()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/data_kategori", [
             "headers" => [
@@ -40,7 +40,7 @@ class Model_laporan_admin extends Model
 
     public function view_data_filter($param)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_filter", [
             'query' => $param,
@@ -55,7 +55,7 @@ class Model_laporan_admin extends Model
 
     public function view_data_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_view_tempat", [
             "headers" => [
@@ -69,7 +69,7 @@ class Model_laporan_admin extends Model
 
     public function view_data_kategori_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/data_kategori_tempat", [
             "headers" => [
@@ -83,7 +83,7 @@ class Model_laporan_admin extends Model
 
     public function view_data_filter_tempat($param)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_laporan/index_filter_tempat", [
             'query' => $param,

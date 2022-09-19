@@ -14,7 +14,7 @@ class Model_admin extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_pengaturan/show/" . $id, [
             "headers" => [
@@ -28,7 +28,7 @@ class Model_admin extends Model
 
     public function detail_data_password($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_pengaturan/show/" . $id, [
             "headers" => [
@@ -42,7 +42,7 @@ class Model_admin extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $client = new Client([
             'base_uri' => $link,
         ]);

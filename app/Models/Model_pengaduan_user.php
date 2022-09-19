@@ -15,7 +15,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/index_view/" . $id, [
             "headers" => [
@@ -29,7 +29,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/show/" . $id, [
             "headers" => [
@@ -43,7 +43,7 @@ class Model_pengaduan_user extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $client = new Client([
             'base_uri' => $link,
         ]);
@@ -60,7 +60,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_web()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/view_data_web", [
             "headers" => [
@@ -74,7 +74,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_web($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/detail_data_web/" . $id, [
             "headers" => [
@@ -91,7 +91,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_pengguna_apps()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/view_data_pengguna_apps", [
             "headers" => [
@@ -105,7 +105,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_pengguna_apps($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/detail_data_pengguna_apps/" . $id, [
             "headers" => [
@@ -122,7 +122,7 @@ class Model_pengaduan_user extends Model
 
     public function view_data_kategori_pengaduan()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/view_data_kategori_pengaduan", [
             "headers" => [
@@ -136,7 +136,7 @@ class Model_pengaduan_user extends Model
 
     public function detail_data_kategori_pengaduan($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/detail_data_kategori_pengaduan/" . $id, [
             "headers" => [
@@ -152,7 +152,7 @@ class Model_pengaduan_user extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/User/';
+        $link = 'http://localhost:8080/api_smartapps/User/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_pengaduan/data_edit_dropwdown/" . $id, [
             "headers" => [

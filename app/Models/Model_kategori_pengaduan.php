@@ -17,7 +17,7 @@ class Model_kategori_pengaduan extends Model
 
     public function view_data()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_kategori_pengaduan", [
             "headers" => [
@@ -31,7 +31,7 @@ class Model_kategori_pengaduan extends Model
 
     public function add_data($data)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('POST', $link . 'M_kategori_pengaduan/create', [
             'form_params' => $data
@@ -42,7 +42,7 @@ class Model_kategori_pengaduan extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . 'M_kategori_pengaduan/show/' . $id, [
             "headers" => [
@@ -56,7 +56,7 @@ class Model_kategori_pengaduan extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('PUT', $link . 'M_kategori_pengaduan/update/' . $id, [
             'form_params' => $data
@@ -66,7 +66,7 @@ class Model_kategori_pengaduan extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_kategori_pengaduan/delete/' . $id)->getBody();
         return json_decode($response, true);
@@ -74,7 +74,7 @@ class Model_kategori_pengaduan extends Model
 
     public function cek_foreign($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('GET', $link . 'M_kategori_pengaduan/cek_foreign/' . $id)->getBody();
         return json_decode($response, true);
@@ -86,7 +86,7 @@ class Model_kategori_pengaduan extends Model
 
     public function view_data_web()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_kategori_pengaduan/view_data_web", [
             "headers" => [
@@ -100,7 +100,7 @@ class Model_kategori_pengaduan extends Model
 
     public function detail_data_web($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . 'M_kategori_pengaduan/detail_data_web/' . $id, [
             "headers" => [

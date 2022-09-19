@@ -14,7 +14,7 @@ class Model_kategori_tempat extends Model
 
     public function view_data()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "M_kategori_tempat", [
             "headers" => [
@@ -28,7 +28,7 @@ class Model_kategori_tempat extends Model
 
     public function add_data($data)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('POST', $link . 'M_kategori_tempat/create', [
             'form_params' => $data
@@ -38,7 +38,7 @@ class Model_kategori_tempat extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . 'M_kategori_tempat/show/' . $id, [
             "headers" => [
@@ -52,7 +52,7 @@ class Model_kategori_tempat extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('PUT', $link . 'M_kategori_tempat/update/' . $id, [
             'form_params' => $data
@@ -62,7 +62,7 @@ class Model_kategori_tempat extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_kategori_tempat/delete/' . $id)->getBody();
         return json_decode($response, true);
@@ -70,7 +70,7 @@ class Model_kategori_tempat extends Model
 
     public function cek_foreign($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('GET', $link . 'M_kategori_tempat/cek_foreign/' . $id)->getBody();
         return json_decode($response, true);

@@ -11,7 +11,7 @@ class Model_frontend extends Model
 
     public function view_data_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $link = 'http://localhost:8080/api_smartapps/Frontend/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "Frontend/view_data_tempat", [
             "headers" => [
@@ -25,7 +25,7 @@ class Model_frontend extends Model
 
     public function detail_data_tempat($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $link = 'http://localhost:8080/api_smartapps/Frontend/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "Frontend/detail_data_tempat/" . $id, [
             "headers" => [
@@ -39,7 +39,7 @@ class Model_frontend extends Model
 
     public function view_data_pengaduan()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $link = 'http://localhost:8080/api_smartapps/Frontend/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "Frontend/view_data_pengaduan", [
             "headers" => [
@@ -53,7 +53,7 @@ class Model_frontend extends Model
 
     public function detail_data_pengaduan($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+        $link = 'http://localhost:8080/api_smartapps/Frontend/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("get", $link . "Frontend/detail_data_pengaduan/" . $id, [
             "headers" => [

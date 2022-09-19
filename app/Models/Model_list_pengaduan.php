@@ -26,7 +26,7 @@ class Model_list_pengaduan extends Model
 
     // public function view_data()
     // {
-    //     // $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+    //     // $link = 'http://localhost:8080/api_smartapps/Frontend/';
     //     $link = 'http://localhost/api_smartapps/Frontend/';
     //     $curl = \Config\Services::curlrequest();
     //     $result = $curl->request("get", $link . "Pengaduan", [
@@ -41,7 +41,7 @@ class Model_list_pengaduan extends Model
 
     // public function detail_data($id)
     // {
-    //     // $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Frontend/';
+    //     // $link = 'http://localhost:8080/api_smartapps/Frontend/';
     //     $link = 'http://localhost/api_smartapps/Frontend/';
     //     $curl = \Config\Services::curlrequest();
     //     $result = $curl->request("get", $link . 'Pengaduan/show/' . $id, [

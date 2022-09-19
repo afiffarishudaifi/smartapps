@@ -13,7 +13,7 @@ class Model_validasi extends Model
 
     public function view_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi", [
             "headers" => [
@@ -27,7 +27,7 @@ class Model_validasi extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/show/" . $id, [
             "headers" => [
@@ -41,7 +41,7 @@ class Model_validasi extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('PUT', $link . 'M_validasi/update/' . $id, [
             'form_params' => $data
@@ -51,7 +51,7 @@ class Model_validasi extends Model
 
     public function data_edit_dropwdown($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/data_edit_dropwdown/" . $id, [
             "headers" => [
@@ -65,7 +65,7 @@ class Model_validasi extends Model
 
     public function detail_data_foto($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/detail_data_foto/" . $id, [
             "headers" => [
@@ -81,7 +81,7 @@ class Model_validasi extends Model
     // begin validasi pengaduan //
     public function view_data_pengaduan()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/index_pengaduan", [
             "headers" => [
@@ -95,7 +95,7 @@ class Model_validasi extends Model
 
     public function detail_data_pengaduan($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/show_pengaduan/" . $id, [
             "headers" => [
@@ -109,7 +109,7 @@ class Model_validasi extends Model
 
     public function update_data_pengaduan($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
          $curl = \Config\Services::curlrequest();
         $response = $curl->request('POST', $link . 'M_validasi/update_data_pengaduan/' . $id, [
             'form_params' => $data
@@ -119,7 +119,7 @@ class Model_validasi extends Model
 
     public function data_edit_dropwdown_pengaduan($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_validasi/data_edit_dropwdown_pengaduan/" . $id, [
             "headers" => [

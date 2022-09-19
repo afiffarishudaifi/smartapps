@@ -14,7 +14,7 @@ class Model_komentar extends Model
 
     public function view_data()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_komentar", [
             "headers" => [
@@ -28,7 +28,7 @@ class Model_komentar extends Model
 
     public function add_data($data)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('POST', $link . 'M_komentar/create', [
             'form_params' => $data
@@ -38,7 +38,7 @@ class Model_komentar extends Model
 
     public function detail_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . 'M_komentar/show/' . $id, [
             "headers" => [
@@ -52,7 +52,7 @@ class Model_komentar extends Model
 
     public function update_data($data, $id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('PUT', $link . 'M_komentar/update/' . $id, [
             'form_params' => $data
@@ -62,7 +62,7 @@ class Model_komentar extends Model
 
     public function delete_data($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $response = $curl->request('DELETE', $link . 'M_komentar/delete/' . $id)->getBody();
         return json_decode($response, true);
@@ -74,7 +74,7 @@ class Model_komentar extends Model
 
     public function view_data_apps()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_komentar/view_data_apps", [
             "headers" => [
@@ -88,7 +88,7 @@ class Model_komentar extends Model
 
     public function detail_data_dropdown($id)
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_komentar/detail_data_dropdown/" . $id, [
             "headers" => [
@@ -105,7 +105,7 @@ class Model_komentar extends Model
 
     public function view_data_tempat()
     {
-        $link = 'http://smartapps.tamif2021.my.id/api_smartapps/Admin/';
+        $link = 'http://localhost:8080/api_smartapps/Admin/';
         $curl = \Config\Services::curlrequest();
         $result = $curl->request("GET", $link . "M_komentar/view_data_tempat", [
             "headers" => [
